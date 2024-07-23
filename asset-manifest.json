@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/samsgpt/static/css/main.984c9495.chunk.css",
-    "main.js": "/samsgpt/static/js/main.0f3ca03c.chunk.js",
-    "main.js.map": "/samsgpt/static/js/main.0f3ca03c.chunk.js.map",
+    "main.css": "/samsgpt/static/css/main.e259321d.chunk.css",
+    "main.js": "/samsgpt/static/js/main.a4f56659.chunk.js",
+    "main.js.map": "/samsgpt/static/js/main.a4f56659.chunk.js.map",
     "runtime-main.js": "/samsgpt/static/js/runtime-main.2c78a641.js",
     "runtime-main.js.map": "/samsgpt/static/js/runtime-main.2c78a641.js.map",
-    "static/js/2.7ba5a1b4.chunk.js": "/samsgpt/static/js/2.7ba5a1b4.chunk.js",
-    "static/js/2.7ba5a1b4.chunk.js.map": "/samsgpt/static/js/2.7ba5a1b4.chunk.js.map",
+    "static/js/2.5d3de2e7.chunk.js": "/samsgpt/static/js/2.5d3de2e7.chunk.js",
+    "static/js/2.5d3de2e7.chunk.js.map": "/samsgpt/static/js/2.5d3de2e7.chunk.js.map",
     "index.html": "/samsgpt/index.html",
-    "static/css/main.984c9495.chunk.css.map": "/samsgpt/static/css/main.984c9495.chunk.css.map",
-    "static/js/2.7ba5a1b4.chunk.js.LICENSE.txt": "/samsgpt/static/js/2.7ba5a1b4.chunk.js.LICENSE.txt"
+    "static/css/main.e259321d.chunk.css.map": "/samsgpt/static/css/main.e259321d.chunk.css.map",
+    "static/js/2.5d3de2e7.chunk.js.LICENSE.txt": "/samsgpt/static/js/2.5d3de2e7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2c78a641.js",
-    "static/js/2.7ba5a1b4.chunk.js",
-    "static/css/main.984c9495.chunk.css",
-    "static/js/main.0f3ca03c.chunk.js"
+    "static/js/2.5d3de2e7.chunk.js",
+    "static/css/main.e259321d.chunk.css",
+    "static/js/main.a4f56659.chunk.js"
   ]
 }
