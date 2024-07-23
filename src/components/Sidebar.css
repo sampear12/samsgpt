@@ -1,57 +1,30 @@
 .sidebar {
-    width: 250px;
-    height: 100vh;
-    background-color: #2a2a2a;
-    color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
+    align-items: start;
 }
 
-.sidebar .logo {
-    margin: 20px 0;
-}
-
-.sidebar .logo img {
-    width: 50px;
-    height: 50px;
-}
-
-.sidebar nav ul {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-    text-align: center;
-}
-
-.sidebar nav ul li {
-    padding: 15px;
-    cursor: pointer;
-    border-bottom: 1px solid #444;
-    transition: background-color 0.3s;
-}
-
-.sidebar nav ul li:hover {
-    background-color: #444;
-}
-
-.sidebar .add-workspace {
-    margin-top: auto;
+.sidebar .header {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     margin-bottom: 20px;
 }
 
-.sidebar .add-workspace button {
-    background-color: #444;
-    color: white;
-    border: none;
-    padding: 10px 20px;
+.sidebar .nav-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-.sidebar .add-workspace button:hover {
-    background-color: #555;
+.sidebar .nav-item img {
+    margin-right: 10px;
+}
+
+.sidebar .nav-item span {
+    font-size: 15px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
 }
