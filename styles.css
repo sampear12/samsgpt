@@ -59,15 +59,11 @@ body {
     line-height: 26px;
 }
 .sam-gpt .image {
-    top: 92px;
-    left: 17px;
     width: 23px;
     height: 23px;
     background-image: url('/mnt/data/image.png');
 }
 .explore-gpt .image {
-    top: 170px;
-    left: 21px;
     width: 15px;
     height: 14px;
     background-image: url('/mnt/data/image.png');
