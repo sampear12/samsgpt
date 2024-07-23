@@ -8,8 +8,8 @@ const Sidebar = () => {
   return (
     <Card>
       <div style={{ marginBottom: '20px' }}>
-        <NavItem icon="path/to/sams-gpt-icon.png" text="Sam's GPT" />
-        <NavItem icon="path/to/resume-icon.png" text="Resume" />
+        <NavItem icon="public/sams-gpt-icon.png" text="Sam's GPT" />
+        <NavItem icon="public/resume-icon.png" text="Resume" />
       </div>
       <NavigateButton />
       <div style={{ backgroundColor: '#ffffff', height: '2px', width: '100%', margin: '10px 0' }}></div>
