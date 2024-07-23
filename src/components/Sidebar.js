@@ -4,6 +4,9 @@ import './Sidebar.css';
 const Sidebar = () => {
     return (
         <div className="sidebar">
+            <div className="logo">
+                <img src="logo.png" alt="Logo" />
+            </div>
             <nav>
                 <ul>
                     <li>Profile</li>
@@ -16,6 +19,9 @@ const Sidebar = () => {
                     <li>Links</li>
                 </ul>
             </nav>
+            <div className="add-workspace">
+                <button>Add Team workspace</button>
+            </div>
         </div>
     );
 };
