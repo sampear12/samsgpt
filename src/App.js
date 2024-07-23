@@ -4,12 +4,12 @@ import MainContent from './components/MainContent';
 import './App.css';
 
 function App() {
-    return (
-        <div className="App">
-            <Sidebar />
-            <MainContent />
-        </div>
-    );
+  return (
+    <div className="App">
+      <Sidebar />
+      <MainContent />
+    </div>
+  );
 }
 
 export default App;

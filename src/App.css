@@ -1,11 +1,11 @@
-.App {
-  display: flex;
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
   background-color: #1e1e1e;
-  height: 100vh;
   color: white;
 }
 
-body {
-  margin: 0;
-  font-family: 'Nanum Gothic', sans-serif;
+.App {
+  display: flex;
+  height: 100vh;
 }

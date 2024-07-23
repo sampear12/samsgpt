@@ -1,24 +1,34 @@
 import React from 'react';
 
 const styles = {
-  Text: {
-    color: '#ffffff',
+  button: {
     fontSize: '20px',
-    fontFamily: 'Nanum Gothic',
+    fontFamily: 'Roboto, sans-serif',
     lineHeight: '26px',
-    padding: '10px 0',
+    padding: '10px 20px',
     cursor: 'pointer',
+    fontWeight: 400, // Regular font weight
+    marginBottom: '10px', // Add margin for spacing
+  },
+  activeButton: {
+    backgroundColor: '#FFFFFF',
+    color: '#000000',
+    borderRadius: '5px',
+  },
+  inactiveButton: {
+    backgroundColor: 'transparent',
+    color: '#FFFFFF',
   },
 };
 
-const defaultProps = {
-  text: 'Profile',
-};
+const ProfileButton = ({ text = 'Profile', active = false }) => {
+  const buttonStyle = active
+    ? { ...styles.button, ...styles.activeButton }
+    : { ...styles.button, ...styles.inactiveButton };
 
-const ProfileButton = (props) => {
   return (
-    <div style={styles.Text}>
-      {props.text ?? defaultProps.text}
+    <div style={buttonStyle}>
+      {text}
     </div>
   );
 };

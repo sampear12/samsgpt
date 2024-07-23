@@ -10,11 +10,13 @@ const styles = {
   },
   icon: {
     marginRight: '10px',
+    width: '20px', // Adjust size as needed
+    height: '24px',
   },
   text: {
     fontSize: '15px',
-    fontFamily: 'Nanum Gothic',
-    fontWeight: 700,
+    fontFamily: 'sans-serif',
+    fontWeight: 400, // Change this to 400 for regular weight
   },
 };
 
