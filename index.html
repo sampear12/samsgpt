@@ -3,41 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sam's GPT</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Profile Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1d1d1d;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #222;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        }
+        .sidebar h1 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .sidebar ul li a:hover {
+            background-color: #444;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .content button {
+            background-color: #666;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .content button:hover {
+            background-color: #888;
+        }
+        .footer {
+            margin-top: 20px;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
     <div class="sidebar">
-        <h2>Navigate</h2>
-        <ul>
-            <li>Profile</li>
-            <li>Education</li>
-            <li>Skills</li>
-            <li>Work Experience</li>
-            <li>Entrepreneurship</li>
-            <li>Extra Curriculars</li>
-            <li>Projects</li>
-            <li>Links</li>
-        </ul>
-        <div class="team-workspace">
-            <button>Add Team workspace</button>
-            <p>Collaborate on a Team plan</p>
+        <div>
+            <h1>Navigate</h1>
+            <ul>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Work Experience</a></li>
+                <li><a href="#">Entrepreneurship</a></li>
+                <li><a href="#">Extra Curriculars</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Links</a></li>
+            </ul>
+        </div>
+        <div class="footer">
+            Sam's GPT can make mistakes, especially in the mornings when she hasn't had her coffee.
         </div>
     </div>
-    <div class="main-content">
-        <div class="header">
-            <h1>Sam's GPT</h1>
-        </div>
-        <div class="content">
-            <div class="chat-box">
-                <button class="generate-button">Generate</button>
-                <input type="text" class="question-input" placeholder="Who is Samika?">
-            </div>
-            <div class="message-box">
-                <p>Sam's GPT can make mistakes, especially in the mornings when she hasn't had her coffee.</p>
-            </div>
+    <div class="content">
+        <div>
+            <h2>Who is Samika?</h2>
+            <button>Generate</button>
         </div>
     </div>
-    <script src="app.js"></script>
 </body>
 </html>
