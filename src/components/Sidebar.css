@@ -1,0 +1,19 @@
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #2a2a2a;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    padding: 15px;
+    cursor: pointer;
+}
