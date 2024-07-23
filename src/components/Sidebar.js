@@ -1,29 +1,17 @@
 import React from 'react';
+import Card from './Card';
+import NavigateButton from './NavigateButton';
+import ProfileButton from './ProfileButton';
 import './Sidebar.css';
 
 const Sidebar = () => {
-    return (
-        <div className="sidebar">
-            <div className="logo">
-                <img src="logo.png" alt="Logo" />
-            </div>
-            <nav>
-                <ul>
-                    <li>Profile</li>
-                    <li>Education</li>
-                    <li>Skills</li>
-                    <li>Work Experience</li>
-                    <li>Entrepreneurship</li>
-                    <li>Extra Curriculars</li>
-                    <li>Projects</li>
-                    <li>Links</li>
-                </ul>
-            </nav>
-            <div className="add-workspace">
-                <button>Add Team workspace</button>
-            </div>
-        </div>
-    );
+  return (
+    <Card>
+      <NavigateButton />
+      <ProfileButton text="Profile" />
+      {/* Add more buttons here as needed */}
+    </Card>
+  );
 };
 
 export default Sidebar;
