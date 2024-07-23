@@ -3,41 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sam's GPT</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Navigation Sidebar</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Nanum Gothic";
+            background-color: #333;
+        }
+        .card {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 237px;
+            height: 852px;
+            background-color: #171717;
+            border-radius: 10px;
+        }
+        .text {
+            color: #ececec;
+            font-family: "Nanum Gothic";
+        }
+        .image {
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .nav-button {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .nav-button .text {
+            margin-left: 10px;
+        }
+        .nav-button.profile {
+            background-color: #ffffff;
+            color: #000000;
+            box-shadow: 0px 2px 10px rgba(3, 3, 3, 0.1);
+            font-size: 20px;
+            line-height: 26px;
+        }
+        .nav-button.navigate .text {
+            color: #b4b4b4;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 20px;
+        }
+        .nav-button.sam-gpt .text,
+        .nav-button.explore-gpt .text {
+            font-size: 11px;
+            line-height: 18px;
+        }
+        .nav-button.skills .text,
+        .nav-button.work-experience .text,
+        .nav-button.entrepreneurship .text,
+        .nav-button.extra-curriculars .text,
+        .nav-button.projects .text,
+        .nav-button.links .text {
+            font-size: 20px;
+            line-height: 26px;
+        }
+        .sam-gpt .image {
+            top: 92px;
+            left: 17px;
+            width: 23px;
+            height: 23px;
+            
+        }
+        .explore-gpt .image {
+            top: 170px;
+            left: 21px;
+            width: 15px;
+            height: 14px;
+            
+        }
+    </style>
 </head>
 <body>
-    <div class="sidebar">
-        <h2>Navigate</h2>
-        <ul>
-            <li>Profile</li>
-            <li>Education</li>
-            <li>Skills</li>
-            <li>Work Experience</li>
-            <li>Entrepreneurship</li>
-            <li>Extra Curriculars</li>
-            <li>Projects</li>
-            <li>Links</li>
-        </ul>
-        <div class="team-workspace">
-            <button>Add Team workspace</button>
-            <p>Collaborate on a Team plan</p>
+    <div class="card">
+        <div class="nav-button sam-gpt">
+            <div class="image sam-gpt"></div>
+            <div class="text">Sam's GPT</div>
+        </div>
+        <div class="nav-button explore-gpt">
+            <div class="image explore-gpt"></div>
+            <div class="text">Explore GPTs</div>
+        </div>
+        <div class="nav-button navigate">
+            <div class="text">Navigate</div>
+        </div>
+        <div class="nav-button profile">
+            <div class="text">Profile</div>
+        </div>
+        <div class="nav-button skills">
+            <div class="text">Skills</div>
+        </div>
+        <div class="nav-button work-experience">
+            <div class="text">Work Experience</div>
+        </div>
+        <div class="nav-button entrepreneurship">
+            <div class="text">Entrepreneurship</div>
+        </div>
+        <div class="nav-button extra-curriculars">
+            <div class="text">Extra Curriculars</div>
+        </div>
+        <div class="nav-button projects">
+            <div class="text">Projects</div>
+        </div>
+        <div class="nav-button links">
+            <div class="text">Links</div>
         </div>
     </div>
-    <div class="main-content">
-        <div class="header">
-            <h1>Sam's GPT</h1>
-        </div>
-        <div class="content">
-            <div class="chat-box">
-                <input type="text" class="question-input" placeholder="Who is Samika?">
-                <button class="generate-button">Generate</button>
-            </div>
-            <div class="message-box">
-                <p>Sam's GPT can make mistakes, especially in the mornings when she hasn't had her coffee.</p>
-            </div>
-        </div>
-    </div>
-    <script src="app.js"></script>
 </body>
 </html>

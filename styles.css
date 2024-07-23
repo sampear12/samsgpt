@@ -1,117 +1,74 @@
 body {
-    display: flex;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #1a1a1a;
-    color: #fff;
-    height: 100vh;
-}
-
-.sidebar {
-    width: 250px;
-    background-color: #2a2a2a;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.sidebar h2 {
-    font-size: 1.5em;
-    margin-bottom: 1em;
-}
-
-.sidebar ul {
-    list-style: none;
     padding: 0;
-}
-
-.sidebar ul li {
-    padding: 10px 0;
-    cursor: pointer;
-}
-
-.sidebar ul li:hover {
-    background-color: #444;
-    padding-left: 10px;
-}
-
-.sidebar .team-workspace {
-    margin-top: 2em;
-}
-
-.sidebar .team-workspace button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #4a4a4a;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-}
-
-.sidebar .team-workspace p {
-    text-align: center;
-    margin-top: 0.5em;
-    font-size: 0.9em;
-}
-
-.main-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    justify-content: space-between;
-}
-
-.header {
+    font-family: "Nanum Gothic";
     background-color: #333;
-    padding: 20px;
-    text-align: center;
-    font-size: 1.5em;
-    border-bottom: 1px solid #444;
 }
-
-.content {
-    flex-grow: 1;
+.card {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 237px;
+    height: 852px;
+    background-color: #171717;
+    border-radius: 10px;
+}
+.text {
+    color: #ececec;
+    font-family: "Nanum Gothic";
+}
+.image {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.nav-button {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-}
-
-.chat-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.chat-box .generate-button {
     padding: 10px 20px;
-    margin-left: 10px;
-    background-color: #666;
-    border: none;
-    color: #fff;
     cursor: pointer;
 }
-
-.chat-box .generate-button:hover {
-    background-color: #888;
+.nav-button .text {
+    margin-left: 10px;
 }
-
-.chat-box .question-input {
-    padding: 10px;
-    width: 300px;
-    background-color: #2a2a2a;
-    border: 1px solid #444;
-    color: #fff;
+.nav-button.profile {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0px 2px 10px rgba(3, 3, 3, 0.1);
+    font-size: 20px;
+    line-height: 26px;
 }
-
-.message-box {
-    text-align: center;
-    font-size: 0.9em;
-    color: #ccc;
-    margin-top: 20px;
+.nav-button.navigate .text {
+    color: #b4b4b4;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+}
+.nav-button.sam-gpt .text,
+.nav-button.explore-gpt .text {
+    font-size: 11px;
+    line-height: 18px;
+}
+.nav-button.skills .text,
+.nav-button.work-experience .text,
+.nav-button.entrepreneurship .text,
+.nav-button.extra-curriculars .text,
+.nav-button.projects .text,
+.nav-button.links .text {
+    font-size: 20px;
+    line-height: 26px;
+}
+.sam-gpt .image {
+    top: 92px;
+    left: 17px;
+    width: 23px;
+    height: 23px;
+    background-image: url('/mnt/data/image.png');
+}
+.explore-gpt .image {
+    top: 170px;
+    left: 21px;
+    width: 15px;
+    height: 14px;
+    background-image: url('/mnt/data/image.png');
 }
