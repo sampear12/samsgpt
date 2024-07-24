@@ -2,8 +2,11 @@ import React, { useCallback } from 'react';
 import CustomImage from './CustomImage';
 import useTypewriter from '../hooks/Typewriter';
 
-const QuestionAnswer = ({ answer }) => {
-    const handleTypewriterComplete = useCallback(() => {}, []);
+// In QuestionAnswer.js
+const QuestionAnswer = ({ question, answer, onComplete }) => {
+    const handleTypewriterComplete = useCallback(() => {
+        if (onComplete) onComplete(); // Call the onComplete function if provided
+    }, [onComplete]);
 
     const answerText = useTypewriter(answer, handleTypewriterComplete);
 

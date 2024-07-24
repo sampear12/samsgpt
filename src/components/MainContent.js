@@ -13,13 +13,14 @@ const MainContent = () => {
 
 
     const handleTypewriterComplete = useCallback(() => {
-        if (!isAnswering) { // <-- Check if an answer is being generated
+        if (!isAnswering) {
             setShowOptions(true);
         } else {
-            setIsAnswering(false); // <-- Reset isAnswering state
+            setIsAnswering(false);
+            setShowOptions(true); // Reset options display
         }
     }, [isAnswering]);
-
+    
     const initialMessage = useTypewriter(
         "   Hi! Thanks for stopping by :) I'm Sam's GPT trained on her resume. When you're ready, navigate to different chats on the sidebar to get to know her. To begin, select an option from the following to know more about her profile!",
         handleTypewriterComplete
@@ -56,9 +57,10 @@ const MainContent = () => {
     ];
 
     const handleAnswerComplete = () => {
-        setSelectedOptionIndex(null); // <-- Reset selectedOptionIndex
-        setShowOptions(true); // <-- Show options again
+        setSelectedOptionIndex(null); // Reset selectedOptionIndex
+        setShowOptions(true); // Show options again
     };
+    
     return (
         <div className="main-content">
             <div className="chat-header">
