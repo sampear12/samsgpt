@@ -1,5 +1,6 @@
 .main-content {
-    padding: 20px;
+    padding: 16px; /* Default padding */
+    box-sizing: border-box;
 }
 
 .chat-header {
@@ -56,21 +57,22 @@ button:hover {
 
 .options-with-image { /* New class to wrap options and image */
     display: flex;
-    align-items: center; /* Align items at the start */
+    align-items: flex-start; /* Align items at the start */
     margin-top: 20px;
-    margin-left: 1250px;
+    margin-left: auto; /* Center align for responsiveness */
 }
 
 .options-container {
     display: flex;
     flex-direction: column; /* Stacks buttons vertically */
-    margin-right: 10px; 
+    margin-left: auto;
 }
+
 .side-icon {
     width: 50px;
     height: 50px;
-    margin-left: 300px; /* Adjusted margin */
-    margin-top: 0px; /* Adjusted margin */
+    margin-left: auto; /* Center align for responsiveness */
+    margin-top: 5px;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -78,25 +80,5 @@ button:hover {
 .response-message {
     display: flex;
     align-items: center;
-    margin-top: 10px; /* Adjust margin as needed */
-}
-
-.question-answer {
-    display: flex;
-    flex-direction: column;
-    background-color: #333;
-    padding: 10px;
-    border-radius: 20px;
-    color: white;
     margin-top: 10px;
-}
-
-.question {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.answer {
-    display: flex;
-    align-items: center;
 }

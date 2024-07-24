@@ -1,0 +1,38 @@
+/* Global padding */
+body {
+    padding: 16px;
+}
+
+.card {
+    padding: 16px;
+}
+
+/* Small devices (phones, less than 600px) */
+@media (max-width: 600px) {
+    body {
+        padding: 8px;
+    }
+    .card {
+        padding: 8px;
+    }
+}
+
+/* Medium devices (tablets, 600px and up) */
+@media (min-width: 600px) and (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+    .card {
+        padding: 12px;
+    }
+}
+
+/* Large devices (desktops, 768px and up) */
+@media (min-width: 768px) {
+    body {
+        padding: 16px;
+    }
+    .card {
+        padding: 16px;
+    }
+}
