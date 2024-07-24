@@ -56,20 +56,21 @@ button:hover {
 
 .options-with-image { /* New class to wrap options and image */
     display: flex;
-    align-items: flex-start; /* Align items at the start */
+    align-items: center; /* Align items at the start */
     margin-top: 20px;
-    margin-left: 900px;
+    margin-left: 1250px;
 }
 
 .options-container {
     display: flex;
     flex-direction: column; /* Stacks buttons vertically */
+    margin-right: 10px; 
 }
 .side-icon {
     width: 50px;
     height: 50px;
-    margin-left: 10px; /* Adjusted margin */
-    margin-top: 5px; /* Adjusted margin */
+    margin-left: 300px; /* Adjusted margin */
+    margin-top: 0px; /* Adjusted margin */
     border-radius: 50%;
     overflow: hidden;
 }
@@ -78,4 +79,24 @@ button:hover {
     display: flex;
     align-items: center;
     margin-top: 10px; /* Adjust margin as needed */
+}
+
+.question-answer {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    margin-top: 10px;
+}
+
+.question {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.answer {
+    display: flex;
+    align-items: center;
 }
