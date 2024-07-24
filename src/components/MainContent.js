@@ -1,10 +1,12 @@
 import React from 'react';
 import CustomImage from './CustomImage';
-import PrimaryButton from './PrimaryButton';
-import SecondaryButton from './SecondaryButton';
+import useTypewriter from '../hooks/Typewriter';
 import './MainContent.css';
 
 const MainContent = () => {
+    const message1 = useTypewriter("Hi! Thanks for stopping by :) I'm Sam's GPT trained on her resume. When you're ready, navigate to different chats on the sidebar to get to know her. To begin, select what you want to know and click on generate!");
+
+
     return (
         <div className="main-content">
             <div className="chat-header">
@@ -12,22 +14,14 @@ const MainContent = () => {
             </div>
             <div className="chat-messages">
                 <div className="message">
-                    <CustomImage className="custom-image" />
-                    <div className="message-content message-content-first">
-                        <p>Hi! Thanks for stopping by :) I'm Sam's GPT trained on her resume. When you're ready, navigate to different chats on the sidebar to get to know her.</p>
-                    </div>
-                </div>
-                <div className="message">
-                    <CustomImage className="custom-image" />
+                    <CustomImage />
                     <div className="message-content">
-                        <p>To begin, click on generate!</p>
+                        <p>{message1}</p>
                     </div>
                 </div>
+                
             </div>
-            <div className="input-area">
-                <PrimaryButton label="Who is Samika ?" />
-                <SecondaryButton label="Generate" />
-            </div>
+
         </div>
     );
 };
