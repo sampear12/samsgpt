@@ -42,7 +42,7 @@ const MainContent = () => {
     const getAnswerForQuestion = (question) => {
         switch(question) { // Switch statement to determine answer based on question
             case "Give me a quick introduction to Samika":
-                return "   Samika is a software engineer with 5 years of experience in full-stack development...";
+                return "   Samika is a student at the university of pittsburgh";
             case "What's it like to work with Samika?":
                 return "Working with Samika is a collaborative and enriching experience. She is known for her problem-solving skills...";
             case "What is she like outside work?":
