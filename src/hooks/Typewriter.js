@@ -1,21 +1,23 @@
 import { useState, useEffect } from 'react';
 
-const useTypewriter = (text, speed = 20) => {
-  const [displayedText, setDisplayedText] = useState('');
-  const [index, setIndex] = useState(0);
+const useTypewriter = (text, onComplete) => {
+    const [displayedText, setDisplayedText] = useState('');
 
-  useEffect(() => {
-    if (index < text.length) {
-      const timer = setTimeout(() => {
-        setDisplayedText((prev) => prev + text[index]);
-        setIndex(index + 1);
-      }, speed);
+    useEffect(() => {
+        let currentIndex = 1;
+        const intervalId = setInterval(() => {
+            if (currentIndex < text.length-1) {
+                setDisplayedText((prev) => prev + text[currentIndex]);
+                currentIndex++;
+            } else {
+                clearInterval(intervalId);
+                if (onComplete) onComplete();
+            }
+        }, 10);
+        return () => clearInterval(intervalId);
+    }, [text, onComplete]);
 
-      return () => clearTimeout(timer);
-    }
-  }, [index, text, speed]);
-
-  return displayedText;
+    return displayedText;
 };
 
 export default useTypewriter;

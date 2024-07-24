@@ -1,56 +1,81 @@
 .main-content {
     padding: 20px;
-  }
-  
-  .chat-header {
+}
+
+.chat-header {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
-  }
-  
-  .chat-messages {
+}
+
+.chat-messages {
     display: flex;
     flex-direction: column;
-  }
-  
-  .message {
+}
+
+.message {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-  }
-  
-  .message-content {
-    margin-left: 10px;
+}
+
+.message-content {
+    margin-left: 10px; /* Reduced margin */
     background-color: #333;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
     color: white;
-  }
-  
-  .input-area {
+}
+
+.input-area {
     display: flex;
     align-items: center;
-    margin-top: 20px;
-  }
-  
-  input {
+    margin-top: 10px;
+}
+
+input {
     flex-grow: 1;
     padding: 10px;
     margin-right: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-  }
-  
-  button {
+}
+
+button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     background-color: #007bff;
     color: white;
     cursor: pointer;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #0056b3;
-  }
-  
+}
+
+.options-with-image { /* New class to wrap options and image */
+    display: flex;
+    align-items: flex-start; /* Align items at the start */
+    margin-top: 20px;
+    margin-left: 900px;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column; /* Stacks buttons vertically */
+}
+.side-icon {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px; /* Adjusted margin */
+    margin-top: 5px; /* Adjusted margin */
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.response-message {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Adjust margin as needed */
+}
