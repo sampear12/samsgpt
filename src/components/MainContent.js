@@ -19,7 +19,7 @@ const MainContent = () => {
     }, []);
 
     const initialMessage = useTypewriter(
-        "Hi! Thanks for stopping by :) I'm Sam's GPT trained on her resume. When you're ready, navigate to different chats on the sidebar to get to know her. To begin, select an option from the following to know more about her profile!",
+        "   Hi! Thanks for stopping by :) I'm Sam's GPT trained on her resume. When you're ready, navigate to different chats on the sidebar to get to know her. To begin, select an option from the following to know more about her profile!",
         handleTypewriterComplete
     );
 
@@ -31,7 +31,7 @@ const MainContent = () => {
     ];
 
     const responses = {
-        "Give me a quick introduction to Samika": "Samika is a student at the University of Pittsburgh.",
+        "Give me a quick introduction to Samika": "    I'm Samika, a senior at the University of Pittsburgh pursuing a bachelors in Computer Science. Apart from stressing about my visa status, I love exploring and applying new tech!",
         "What's it like to work with Samika?": "Working with Samika is a collaborative and enriching experience. She is known for her problem-solving skills...",
         "What is she like outside work?": "Outside of work, Samika enjoys hiking, painting, and volunteering at local animal shelters...",
         "I'm bored and I want to play a game": "Let's play a fun word game! Think of a word, and I'll try to guess it..."
