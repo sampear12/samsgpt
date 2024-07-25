@@ -32,9 +32,9 @@ const MainContent = () => {
 
     const responses = {
         "Give me a quick introduction to Samika": "    I'm Samika, a senior at the University of Pittsburgh pursuing a bachelors in Computer Science. Apart from stressing about my visa status, I love exploring and applying new tech!",
-        "What's it like to work with Samika?": "Working with Samika is a collaborative and enriching experience. She is known for her problem-solving skills...",
-        "What is she like outside work?": "Outside of work, Samika enjoys hiking, painting, and volunteering at local animal shelters...",
-        "I'm bored and I want to play a game": "Let's play a fun word game! Think of a word, and I'll try to guess it..."
+        "What's it like to work with Samika?": "   Debra Stiffey - manager, Honeywell: Working with Samika is....",
+        "What is she like outside work?": "    Outside of work, Samika enjoys hiking, painting, and volunteering at local animal shelters...",
+        "I'm bored and I want to play a game": "   Let's play a fun word game! Think of a word, and I'll try to guess it..."
     };
 
     const handleButtonClick = (option) => {
