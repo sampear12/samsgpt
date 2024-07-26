@@ -1,41 +1,39 @@
 .sidebar {
-    width: 237px;
-    transition: width 0.3s;
-  }
-  
-  .sidebar.collapsed {
-    width: 80px;
-  }
-  
-  .top-icons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .sidebar-content {
-    margin-top: 20px;
-  }
-  
-  .custom-image {
-    margin-top: 20px;
-  }
-  
-  .profile-button {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-  }
-  
-  .profile-button.collapsed {
-    justify-content: center;
-  }
-  
-  .profile-button span {
-    margin-left: 10px;
-  }
-  
-  .profile-button.collapsed span {
-    display: none;
-  }
-  
+  width: 237px;
+  transition: width 0.3s;
+}
+
+.sidebar.collapsed {
+  width: 10px;
+}
+
+.top-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-image {
+  margin-top: 20px;
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  transition: justify-content 0.3s;
+}
+
+.profile-button.collapsed {
+  justify-content: center;
+}
+
+.profile-button span {
+  margin-left: 10px;
+  transition: display 0.3s;
+}
+
+.profile-button.collapsed span {
+  display: none;
+  margin-left: 10px;
+}

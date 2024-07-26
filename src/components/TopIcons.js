@@ -21,19 +21,24 @@ const icons = [
   { id: 2, url: 'https://assets.api.uizard.io/api/cdn/stream/82b4f557-56b8-48fc-98b5-8cffef11197b.png' },
 ];
 
-const TopIcons = ({ onToggleCollapse }) => {
+const TopIcons = ({ onToggleCollapse, collapsed }) => {
   return (
     <div style={styles.iconContainer}>
-      {icons.map((icon, index) => (
+      <div
+        style={{
+          ...styles.imageContainer,
+          backgroundImage: `url(${icons[0].url})`,
+        }}
+        onClick={onToggleCollapse}
+      />
+      {!collapsed && (
         <div
-          key={icon.id}
           style={{
             ...styles.imageContainer,
-            backgroundImage: `url(${icon.url})`,
+            backgroundImage: `url(${icons[1].url})`,
           }}
-          onClick={index === 0 ? onToggleCollapse : null}
         />
-      ))}
+      )}
     </div>
   );
 };

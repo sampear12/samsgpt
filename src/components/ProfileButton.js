@@ -21,14 +21,14 @@ const styles = {
   },
 };
 
-const ProfileButton = ({ text = 'Profile', active = false }) => {
+const ProfileButton = ({ text = 'Profile', active = false, collapsed = false }) => {
   const buttonStyle = active
     ? { ...styles.button, ...styles.activeButton }
     : { ...styles.button, ...styles.inactiveButton };
 
   return (
-    <div style={buttonStyle}>
-      {text}
+    <div style={buttonStyle} className={`profile-button ${collapsed ? 'collapsed' : ''}`}>
+      <span>{text}</span>
     </div>
   );
 };
