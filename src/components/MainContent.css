@@ -1,3 +1,11 @@
+/* Wrapper for the entire main content */
+.scroll-container {
+    height: 100vh; /* Full viewport height */
+    overflow: auto; /* Enable scrolling */
+    display: flex;
+    flex-direction: column;
+}
+
 .main-content {
     padding: 16px;
     box-sizing: border-box;
@@ -150,14 +158,12 @@ button:hover {
     font-size: 13px; /* Match the button's font size */
     font-family: 'Roboto'; /* Match the button's font family */
     line-height: 18px; /* Match the button's line height */
-  
     margin-left: auto;
 }
+
 .question-container {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
     margin-left: auto;
-
 }
-

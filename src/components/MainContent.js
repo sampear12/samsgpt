@@ -23,6 +23,14 @@ const MainContent = () => {
         handleTypewriterComplete
     );
 
+    const handleScrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    const handleScrollToBottom = () => {
+        window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+    };
+
     const options = [
         "Give me a quick introduction to Samika",
         "What's it like to work with Samika?",
@@ -32,9 +40,9 @@ const MainContent = () => {
 
     const responses = {
         "Give me a quick introduction to Samika": "    I'm Samika, a senior at the University of Pittsburgh pursuing a bachelors in Computer Science. Apart from stressing about my visa status, I love exploring and applying new tech!",
-        "What's it like to work with Samika?": "   Debra Stiffey - manager, Honeywell: Working with Samika is....",
-        "What is she like outside work?": "    Outside of work, Samika enjoys hiking, painting, and volunteering at local animal shelters...",
-        "I'm bored and I want to play a game": "   Let's play a fun word game! Think of a word, and I'll try to guess it..."
+        "What's it like to work with Samika?": "    need to add so tired rn",
+        "What is she like outside work?": "    i dont have a personality",
+        "I'm bored and I want to play a game": "   play with my heart"
     };
 
     const handleButtonClick = (option) => {
@@ -49,28 +57,28 @@ const MainContent = () => {
         }, 1000);
     };
     
-
     return (
-        <div className="main-content">
-            <div className="chat-header">
-                <span>Sam's GPT</span>
-            </div>
-            <div className="chat-messages">
-                <div className="message">
-                    <CustomImage />
-                    <div className="message-content">
-                        <p>{initialMessage}</p>
-                    </div>
+        <div className="scroll-container">
+            <div className="main-content">
+                <div className="chat-header">
+                    <span>Sam's GPT</span>
                 </div>
-                {chatHistory.map((chat, index) => (
-    <div key={index} className="chat-entry">
-        <div className="question-container">
-            <div style={styles.Button} className="question-style">{chat.question}</div>
-            <img src="https://assets.api.uizard.io/api/cdn/stream/347c912a-0054-4a72-a32b-5e8b9d5af74d.png" alt="icon" className="side-icon" />
+                <div className="chat-messages">
+                    <div className="message">
+                        <CustomImage />
+                        <div className="message-content">
+                            <p>{initialMessage}</p>
+                        </div>
+                    </div>
+                    {chatHistory.map((chat, index) => (
+        <div key={index} className="chat-entry">
+            <div className="question-container">
+                <div style={styles.Button} className="question-style">{chat.question}</div>
+                <img src="https://assets.api.uizard.io/api/cdn/stream/347c912a-0054-4a72-a32b-5e8b9d5af74d.png" alt="icon" className="side-icon" />
+            </div>
+            <QuestionAnswer question={chat.question} answer={chat.answer} />
         </div>
-        <QuestionAnswer question={chat.question} answer={chat.answer} />
-    </div>
-))}
+    ))}
 
 
             </div>
@@ -95,6 +103,8 @@ const MainContent = () => {
 </div>
 
         </div>
+        </div>
+        
     );
 };
 
