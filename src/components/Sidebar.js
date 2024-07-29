@@ -14,9 +14,14 @@ const Sidebar = () => {
     console.log('Sidebar collapsed:', !collapsed); // Debugging log
   };
 
+  const collapsedStyles = {
+    width: '160px', // Collapsed width
+    padding: '10px', // Collapsed padding
+    alignItems: 'centre',
+  };
+
   return (
-    <Card className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
-     
+    <Card style={collapsed ? collapsedStyles : {}}>
       <TopIcons onToggleCollapse={handleToggle} collapsed={collapsed} />
       <div style={{ marginTop: '20px', marginBottom: '30px' }}>
         <div style={{ display: 'flex', alignItems: 'center' }}>

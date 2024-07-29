@@ -84,30 +84,27 @@ const MainContent = () => {
             </div>
             
             <div className="options-with-image">
-    {showOptions && (
-        <div className="options-container">
-            {options.map((option, index) => (
-                <div key={index} className="option-item">
-                    <Button
-                        label={option}
-                        onClick={() => handleButtonClick(option)}
-                        isSelected={false}
-                    />
-                    {index === options.length - 1 && (
-                        <img src="https://assets.api.uizard.io/api/cdn/stream/347c912a-0054-4a72-a32b-5e8b9d5af74d.png" alt="icon" className="option-icon" />
+                    {showOptions && (
+                        <div className="options-container">
+                            {options.map((option, index) => (
+                                <div key={index} className="option-item">
+                                    <Button
+                                        label={option}
+                                        onClick={() => handleButtonClick(option)}
+                                        isSelected={false}
+                                    />
+                                    {index === options.length - 1 && (
+                                        <img src="https://assets.api.uizard.io/api/cdn/stream/347c912a-0054-4a72-a32b-5e8b9d5af74d.png" alt="icon" className="option-icon" />
+                                    )}
+                                </div>
+                            ))}
+                        </div>
                     )}
                 </div>
-            ))}
+            </div>
         </div>
-    )}
-</div>
-
-        </div>
-        </div>
-        
     );
 };
-
 // Styles for the Button component
 const styles = {
     Button: {

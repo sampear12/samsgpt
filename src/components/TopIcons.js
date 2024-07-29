@@ -18,7 +18,7 @@ const styles = {
 
 const icons = [
   { id: 1, url: 'https://assets.api.uizard.io/api/cdn/stream/d623031a-d918-41d4-9fb3-2ac91c3d5ac0.png' },
-  { id: 2, url: 'https://assets.api.uizard.io/api/cdn/stream/82b4f557-56b8-48fc-98b5-8cffef11197b.png' },
+  
 ];
 
 const TopIcons = ({ onToggleCollapse, collapsed }) => {
@@ -31,14 +31,7 @@ const TopIcons = ({ onToggleCollapse, collapsed }) => {
         }}
         onClick={onToggleCollapse}
       />
-      {!collapsed && (
-        <div
-          style={{
-            ...styles.imageContainer,
-            backgroundImage: `url(${icons[1].url})`,
-          }}
-        />
-      )}
+      
     </div>
   );
 };

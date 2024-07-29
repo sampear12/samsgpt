@@ -68,18 +68,21 @@ button:hover {
     align-items: flex-start;
     margin-top: 20px;
     margin-left: auto;
+    flex-shrink: 0
 }
 
 .options-container {
     display: flex;
     flex-direction: column;
     margin-left: auto;
+    flex-shrink: 0
 }
 
 .option-item {
     display: flex;
     align-items: center;
     margin-bottom: 10px; /* Add space between options */
+    flex-shrink: 0
 }
 
 .option-icon {
@@ -88,6 +91,7 @@ button:hover {
     margin-left: 10px; /* Space between button and icon */
     border-radius: 50%;
     overflow: hidden;
+    flex-shrink: 0
 }
 
 .side-icon {
@@ -97,6 +101,7 @@ button:hover {
     margin-top: 5px;
     border-radius: 50%;
     overflow: hidden;
+    flex-shrink: 0
 }
 
 .response-message {
@@ -130,6 +135,7 @@ button:hover {
     flex-direction: column; /* Stack items vertically */
     align-items: flex-start; /* Align items to the left */
     margin-bottom: 20px; /* Add margin between chat entries */
+    flex-shrink: 0
 }
 
 .chat-question {
@@ -137,6 +143,7 @@ button:hover {
     align-items: center;
     margin-left: 10px;
     margin-bottom: 10px; /* Add space between question and answer */
+    flex-shrink: 0
 }
 
 .chat-icon {
@@ -145,25 +152,29 @@ button:hover {
     margin-right: 10px;
     border-radius: 50%;
     overflow: hidden;
+    flex-shrink: 0
 }
 
 .question-style {
+    background-color: #2f2f2f;
+    color: #ececec;
+    padding: 10px 20px;
+    border-radius: 22px;
+    font-size: 13px;
+    font-family: 'Roboto';
+    line-height: 18px;
+    flex: 1; /* Allow the text container to grow */
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align text to the left */
-    background-color: #2f2f2f; /* Ensure the background matches the button style */
-    color: #ececec; /* Ensure the text color matches the button style */
-    padding: 10px 20px; /* Add padding to match button style */
-    border-radius: 22px; /* Match the button's border-radius */
-    font-size: 13px; /* Match the button's font size */
-    font-family: 'Roboto'; /* Match the button's font family */
-    line-height: 18px; /* Match the button's line height */
-    margin-left: auto;
+    flex-shrink: 0
 }
+
 
 .question-container {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
     margin-left: auto;
+    flex-shrink: 0
+    
 }

@@ -9,11 +9,13 @@ const styles = {
     cursor: 'pointer',
     fontWeight: 400, // Regular font weight
     marginBottom: '10px', // Add margin for spacing
+    alignItems: 'left',
   },
   activeButton: {
     backgroundColor: '#FFFFFF',
     color: '#000000',
     borderRadius: '5px',
+    alignItems: 'left',
   },
   inactiveButton: {
     backgroundColor: 'transparent',
