@@ -44,3 +44,7 @@
   display: none;
   margin-left: 10px;
 }
+
+.profile-button.active {
+  color: #d4d4d4; /* Two shades lighter */
+}
