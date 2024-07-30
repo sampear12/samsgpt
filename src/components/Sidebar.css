@@ -48,3 +48,6 @@
 .profile-button.active {
   color: #d4d4d4; /* Two shades lighter */
 }
+a {
+  text-decoration: none; /* Remove underline for all anchor tags */
+}

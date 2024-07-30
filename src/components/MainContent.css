@@ -4,11 +4,6 @@
     overflow: auto; /* Enable scrolling */
     display: flex;
     flex-direction: column;
-    
-    
-    
-   
-    
 }
 .main-content {
     padding: 16px;
@@ -32,11 +27,13 @@
 .message {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .message-content {
     margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px ;
     background-color: #333;
     padding: 10px;
     border-radius: 20px;
@@ -76,7 +73,7 @@ button:hover {
 .options-with-image {
     display: flex;
     align-items: flex-start;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: auto;
     flex-shrink: 0;
 }
@@ -121,7 +118,7 @@ button:hover {
 .response-message {
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 .active-question {
@@ -148,7 +145,7 @@ button:hover {
     display: flex;
     flex-direction: column; /* Stack items vertically */
     align-items: flex-start; /* Align items to the left */
-    margin-bottom: 20px; /* Add margin between chat entries */
+    margin-bottom: 7px; /* Add margin between chat entries */
     flex-shrink: 0;
 }
 
@@ -156,7 +153,7 @@ button:hover {
     display: flex;
     align-items: center;
     margin-left: 10px;
-    margin-bottom: 10px; /* Add space between question and answer */
+    margin-bottom: 0px; /* Add space between question and answer */
     flex-shrink: 0;
 }
 
@@ -188,7 +185,7 @@ button:hover {
 .question-container {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     margin-left: auto;
     flex-shrink: 0;
 }

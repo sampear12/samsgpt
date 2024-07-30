@@ -13,13 +13,20 @@ const MainContent = () => {
     const [isAnswering, setIsAnswering] = useState(false);
     const [activeQuestion, setActiveQuestion] = useState(''); // Add this line
 
-
     const handleTypewriterComplete = useCallback(() => {
         setShowOptions(true); // Show options after initial message
     }, []);
 
     const initialMessage = useTypewriter(
-        "   Hi! Thanks for stopping by :) I'm Sam's GPT trained on her resume. When you're ready, navigate to different chats on the sidebar to get to know her. To begin, select an option from the following to know more about her profile!",
+        `   Hi! Thanks for stopping by :) I'm Samika and this is Sam's GPT trained on my resume and personality.
+
+- I am a senior pursuing a bachelors in Computer Science at the University of Pittsburgh (Dean's List '24 and '23)
+
+- International student from India in the USA on an F1 visa :)
+
+- 2x Founder and CEO with a deep rooted passion for making a tangible positive impact using technology
+
+- Part time chef for my entire friend group and a childhood interest in canvas paintings`,
         handleTypewriterComplete
     );
 
@@ -39,10 +46,10 @@ const MainContent = () => {
     ];
 
     const responses = {
-        "Give me a quick introduction to Samika": "    I'm Samika, a senior at the University of Pittsburgh pursuing a bachelors in Computer Science. Apart from stressing about my visa status, I love exploring and applying new tech!",
-        "What's it like to work with Samika?": "    need to add so tired rn",
-        "What is she like outside work?": "    i dont have a personality",
-        "I'm bored and I want to play a game": "   play with my heart"
+        "Give me a quick introduction to Samika": "I'm Samika, a senior at the University of Pittsburgh pursuing a bachelors in Computer Science. \n Apart from stressing about my visa status, I love exploring and applying new tech!",
+        "What's it like to work with Samika?": "need to add so tired rn",
+        "What is she like outside work?": "i dont have a personality",
+        "I'm bored and I want to play a game": "play with my heart"
     };
 
     const handleButtonClick = (option) => {
@@ -56,7 +63,7 @@ const MainContent = () => {
             setShowOptions(true); // Show options after answering
         }, 1000);
     };
-    
+
     return (
         <div className="scroll-container">
             <div className="main-content">
@@ -67,23 +74,20 @@ const MainContent = () => {
                     <div className="message">
                         <CustomImage />
                         <div className="message-content">
-                            <p>{initialMessage}</p>
+                            <p dangerouslySetInnerHTML={{ __html: initialMessage.replace(/\n/g, '<br />') }}></p>
                         </div>
                     </div>
                     {chatHistory.map((chat, index) => (
-        <div key={index} className="chat-entry">
-            <div className="question-container">
-                <div style={styles.Button} className="question-style">{chat.question}</div>
-                <img src="https://assets.api.uizard.io/api/cdn/stream/347c912a-0054-4a72-a32b-5e8b9d5af74d.png" alt="icon" className="side-icon" />
-            </div>
-            <QuestionAnswer question={chat.question} answer={chat.answer} />
-        </div>
-    ))}
-
-
-            </div>
-            
-            <div className="options-with-image">
+                        <div key={index} className="chat-entry">
+                            <div className="question-container">
+                                <div style={styles.Button} className="question-style">{chat.question}</div>
+                                <img src="https://assets.api.uizard.io/api/cdn/stream/347c912a-0054-4a72-a32b-5e8b9d5af74d.png" alt="icon" className="side-icon" />
+                            </div>
+                            <QuestionAnswer question={chat.question} answer={chat.answer} />
+                        </div>
+                    ))}
+                </div>
+                <div className="options-with-image">
                     {showOptions && (
                         <div className="options-container">
                             {options.map((option, index) => (
@@ -105,6 +109,7 @@ const MainContent = () => {
         </div>
     );
 };
+
 // Styles for the Button component
 const styles = {
     Button: {

@@ -1,31 +1,39 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom'; // Added useLocation
+import { Link, useLocation } from 'react-router-dom';
 import Card from './Card';
 import CustomImage from './CustomImage';
 import TopIcons from './TopIcons';
 import ProfileButton from './ProfileButton';
+import TutorialOverlay from './TutorialOverlay'; // Import the TutorialOverlay
 import './Sidebar.css';
 
 const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
-  const location = useLocation(); // Added
+  const [showTutorial, setShowTutorial] = useState(true); // State to control tutorial visibility
+  const location = useLocation();
 
   const handleToggle = () => {
     setCollapsed(!collapsed);
-    console.log('Sidebar collapsed:', !collapsed); // Debugging log
+    console.log('Sidebar collapsed:', !collapsed);
   };
 
   const collapsedStyles = {
-    width: '160px', // Collapsed width
-    padding: '10px', // Collapsed padding
-    alignItems: 'centre',
+    width: '160px',
+    padding: '10px',
+    alignItems: 'center',
+  };
+
+  const handleDismissTutorial = () => {
+    setShowTutorial(false);
   };
 
   return (
     <Card style={collapsed ? collapsedStyles : {}}>
-      <TopIcons onToggleCollapse={handleToggle} collapsed={collapsed} />
+      <div className="top-left-icon" onClick={handleToggle}>
+        <TopIcons collapsed={collapsed} />
+      </div>
       <div style={{ marginTop: '20px', marginBottom: '30px' }}>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div style={{ display: 'flex', alignItems: 'center' }} className="profile-button">
           <CustomImage />
           {!collapsed && <span style={{ marginLeft: '10px', color: '#ffffff' }}>Sam's GPT</span>}
         </div>
@@ -33,11 +41,12 @@ const Sidebar = () => {
       <Link to="/profile">
         <ProfileButton
           text="Profile"
-          active={location.pathname === '/profile'} // Updated
+          active={location.pathname === '/profile'}
           collapsed={collapsed}
+          className="profile-button"
         />
       </Link>
-      <div style={{ marginTop: '20px', color: '#b4b4b4' }}>
+      <div style={{ marginTop: '20px', color: '#b4b4b4' }} className="previous-conversations">
         {!collapsed && <span>Previous Conversations</span>}
       </div>
       {!collapsed && (
@@ -46,52 +55,53 @@ const Sidebar = () => {
       <Link to="/education">
         <ProfileButton
           text="Education"
-          active={location.pathname === '/education'} // Updated
+          active={location.pathname === '/education'}
           collapsed={collapsed}
         />
       </Link>
       <Link to="/skills">
         <ProfileButton
           text="Skills"
-          active={location.pathname === '/skills'} // Updated
+          active={location.pathname === '/skills'}
           collapsed={collapsed}
         />
       </Link>
       <Link to="/work-experience">
         <ProfileButton
           text="Work Experience"
-          active={location.pathname === '/work-experience'} // Updated
+          active={location.pathname === '/work-experience'}
           collapsed={collapsed}
         />
       </Link>
       <Link to="/entrepreneurship">
         <ProfileButton
           text="Entrepreneurship"
-          active={location.pathname === '/entrepreneurship'} // Updated
+          active={location.pathname === '/entrepreneurship'}
           collapsed={collapsed}
         />
       </Link>
       <Link to="/extra-curriculars">
         <ProfileButton
           text="Extra Curriculars"
-          active={location.pathname === '/extra-curriculars'} // Updated
+          active={location.pathname === '/extra-curriculars'}
           collapsed={collapsed}
         />
       </Link>
       <Link to="/projects">
         <ProfileButton
           text="Projects"
-          active={location.pathname === '/projects'} // Updated
+          active={location.pathname === '/projects'}
           collapsed={collapsed}
         />
       </Link>
       <Link to="/links">
         <ProfileButton
           text="Links"
-          active={location.pathname === '/links'} // Updated
+          active={location.pathname === '/links'}
           collapsed={collapsed}
         />
       </Link>
+      {showTutorial && <TutorialOverlay onDismiss={handleDismissTutorial} />}
     </Card>
   );
 };

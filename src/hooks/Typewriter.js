@@ -13,7 +13,7 @@ const useTypewriter = (text, onComplete) => {
                 clearInterval(intervalId);
                 if (onComplete) onComplete();
             }
-        }, 10);
+        }, );
         return () => clearInterval(intervalId);
     }, [text, onComplete]);
 
