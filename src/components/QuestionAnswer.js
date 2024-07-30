@@ -2,7 +2,6 @@ import React, { useCallback } from 'react';
 import CustomImage from './CustomImage';
 import useTypewriter from '../hooks/Typewriter';
 
-// In QuestionAnswer.js
 const QuestionAnswer = ({ question, answer, onComplete }) => {
     const handleTypewriterComplete = useCallback(() => {
         if (onComplete) onComplete(); // Call the onComplete function if provided
@@ -14,7 +13,7 @@ const QuestionAnswer = ({ question, answer, onComplete }) => {
         <div className="message">
             <CustomImage />
             <div className="message-content">
-                <p>{answerText}</p>
+                <p dangerouslySetInnerHTML={{ __html: answerText.replace(/\n/g, '<br />') }}></p>
             </div>
         </div>
     );

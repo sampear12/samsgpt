@@ -18,7 +18,7 @@ const Sidebar = () => {
   };
 
   const collapsedStyles = {
-    width: '160px',
+    width: '70px',
     padding: '10px',
     alignItems: 'center',
   };

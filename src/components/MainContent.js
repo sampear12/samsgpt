@@ -1,32 +1,31 @@
-// Importing necessary React hooks and components
 import React, { useState, useCallback } from 'react';
-
 import CustomImage from './CustomImage';
 import useTypewriter from '../hooks/Typewriter';
 import QuestionAnswer from './QuestionAnswer';
 import './MainContent.css';
 
-// Define the MainContent component
 const MainContent = () => {
     const [chatHistory, setChatHistory] = useState([]); // State to store chat history
     const [showOptions, setShowOptions] = useState(false);
     const [isAnswering, setIsAnswering] = useState(false);
-    const [activeQuestion, setActiveQuestion] = useState(''); // Add this line
+    const [activeQuestion, setActiveQuestion] = useState('');
 
     const handleTypewriterComplete = useCallback(() => {
         setShowOptions(true); // Show options after initial message
     }, []);
 
     const initialMessage = useTypewriter(
-        `   Hi! Thanks for stopping by :) I'm Samika and this is Sam's GPT trained on my resume and personality.
+        `   Hi! Thanks for stopping by :) I'm Samika, a senior at Pitt studying Computer Science. I built Sam's GPT to be an AI version of me to reflect my recent interest in AI/ML! A quick introduction:
 
-- I am a senior pursuing a bachelors in Computer Science at the University of Pittsburgh (Dean's List '24 and '23)
+- I graduate in 2025 with a degree in Computer Science at the University of Pittsburgh (Dean's List '24 and '23). I am also an international student from India in the USA on an F1 visa :)
 
-- International student from India in the USA on an F1 visa :)
+- I'm currently looking for full time roles in software/cloud engineering for 2025. 
 
-- 2x Founder and CEO with a deep rooted passion for making a tangible positive impact using technology
+- Previously worked as a Cloud DevOps Engineering Intern @ Saviynt, Test Engineering Intern @ Honeywell and currently serve as CEO of a SAAS company
 
-- Part time chef for my entire friend group and a childhood interest in canvas paintings`,
+- 2x Founder with a deep rooted passion for making a tangible positive impact using technology
+
+- Part time chef for my entire friend group and an avid automotive enthusiast`,
         handleTypewriterComplete
     );
 
@@ -39,22 +38,51 @@ const MainContent = () => {
     };
 
     const options = [
-        "Give me a quick introduction to Samika",
         "What's it like to work with Samika?",
+        "What are her hobbies?",
         "What is she like outside work?",
         "I'm bored and I want to play a game"
     ];
 
     const responses = {
-        "Give me a quick introduction to Samika": "I'm Samika, a senior at the University of Pittsburgh pursuing a bachelors in Computer Science. \n Apart from stressing about my visa status, I love exploring and applying new tech!",
-        "What's it like to work with Samika?": "need to add so tired rn",
-        "What is she like outside work?": "i dont have a personality",
-        "I'm bored and I want to play a game": "play with my heart"
+        "What's it like to work with Samika?": `"  <strong>#1 When I believe in an idea, I pursue it wholeheartedly.</strong>
+
+        - At Saviynt, I pitched an idea I had to create in-house automations that would save 48min-1.2h/day for over 600 employees.
+        - The CEO approved of the POC, single coolest moment of my corporate life.
+
+
+        <strong>#2 Apart from my sense of humor, I also have a passion for making things more efficient.</strong>
+
+        - At Honeywell, I helped create the internal testing website which improved efficiency within the testing team by 30% in the first month. 
+        - I also replaced the background with the Elmo on fire meme, thereby making history in Pittsburgh's Honeywell office as the "Elmo intern". What's productivity without a lil humor?
+        
+
+        <strong>#3 Great things are never done by one person..</strong>
+
+        - Having led a team of 8 people at my startup, I learnt the fundamentals of leadership.
+        - No matter how good one may be, we are nothing without our team.`,
+        "What are her hobbies?": `"   Apart from coding the most random ideas at 3am I also enjoy:
+
+- cooking (especially Thai food)
+
+- painting, bowling, top golf 
+
+- volunteering at the animal shelter (let me know if you'd be interested as well!)
+
+- examining car engines (especially v8 sport cars)
+
+- rooting for Ferrari in Formula 1 races
+
+- always trying to find problems that I could turn into a startup!`,
+        "What is she like outside work?": `   <strong>"The key to success is happiness"</strong>
+
+I make sure to take time to do things that keep me mentally calm and refreshed. This includes giving enough time to develop the ideas that I am passionate about, spending time with friends and family, taking a break to pet a cute dog, and doing spontaneous things with my friends!`,
+        "I'm bored and I want to play a game": "   Sure! Here's a few games I love playing:"
     };
 
     const handleButtonClick = (option) => {
         const answer = responses[option];
-        setActiveQuestion(option); // Add this line
+        setActiveQuestion(option);
         setChatHistory(prevHistory => [...prevHistory, { question: option, answer }]);
         setShowOptions(false); // Hide options during answering
         setIsAnswering(true); // Set answering state
