@@ -1,10 +1,12 @@
 /* Global padding */
 body {
     padding: 16px;
+    box-sizing: border-box; /* Ensure padding doesn't add to width */
 }
 
 .card {
     padding: 16px;
+    box-sizing: border-box; /* Ensure padding doesn't add to width */
 }
 
 /* Small devices (phones, less than 600px) */
@@ -17,6 +19,9 @@ body {
     }
     .card {
         padding: 8px;
+    }
+    img, .card, .sidebar {
+        max-width: 100%; /* Ensure these elements do not exceed screen width */
     }
 }
 
