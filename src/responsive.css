@@ -10,7 +10,7 @@ body {
 /* Small devices (phones, less than 600px) */
 @media (max-width: 600px) {
     .sidebar {
-        width: 200px; /* Adjust this value to make the sidebar smaller on phones */
+        width: 50px; /* Adjust this value to make the sidebar smaller on phones */
     }
     body {
         padding: 8px;
