@@ -17,6 +17,7 @@ const Links = () => {
     const handleTypewriterComplete = useCallback(() => {
         setShowOptions(true); // Show options after initial message
     }, []);
+    
 
     const initialMessage = useTypewriter(
         "   Hi! Thanks for stopping by :) I'm Sam's GPT trained on her resume. When you're ready, navigate to different chats on the sidebar to get to know her. To begin, select an option from the following to know more about her profile!",

@@ -23,8 +23,7 @@ const WorkExperience = () => {
 • Participated in the Agile/Scrum Software Development process - Sprint Planning, Standup, etc.
 
 <strong>Undergraduate Teaching Assistant, University of Pittsburgh, Pittsburgh, PA 2023-2024 </strong>
-• Conducted weekly recitations, created quizzes/mock exams, graded assignments, and hosted office hours
-for students in CS0445 Algorithms and Data Structures & CS0401 Intermediate Programming in Java.
+• Conducted weekly recitations, created quizzes/mock exams, graded assignments, and hosted office hours for students in CS0445 Algorithms and Data Structures & CS0401 Intermediate Programming in Java.
 
 <strong>Website Development Intern, YouthPlaces, Pittsburgh, PA January-May 2023</strong>
 • Modified the organization’s website to monitor website traffic and digital risk rates using HTML and JS.
@@ -42,24 +41,13 @@ for students in CS0445 Algorithms and Data Structures & CS0401 Intermediate Prog
     };
 
     const options = [
-        "Programming Languages",
-        "Cloud",
-        "FrontEnd/Backend Experience",
-        "Tools",
+        "Cloud Devops Intern @ Saviynt",
+        "Test Engineering Intern @ Honeywell",
+        "Web Dev Intern @ YouthPlaces",
     ];
 
     const responses = {
-        "Programming Languages": `   I've been coding since I was 17 and have learnt a myriad of languages since. My years of experience in each: 
-        
-        Java: 5+ years
-
-        Python: 3+ years
-        
-        HTML/CSS/JavaScript: 2+ years
-
-        C#: 1 year
-
-        C: 1 year`,
+        "Cloud Devops Intern @ Saviynt": `   `,
         "Experience in Cloud": `    I have been working within the cloud for the past year with 3 months of concentrated experience working at Saviynt as a Cloud DevOps Intern.
         
         - managed roll creation, access management and assumRole functionality on IAM

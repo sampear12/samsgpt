@@ -6,7 +6,7 @@ import useTypewriter from '../hooks/Typewriter';
 import QuestionAnswer from './QuestionAnswer';
 import './MainContent.css';
 
-// Define the MainContent component
+
 const Entre = () => {
     const [chatHistory, setChatHistory] = useState([]); // State to store chat history
     const [showOptions, setShowOptions] = useState(false);
@@ -19,7 +19,7 @@ const Entre = () => {
     }, []);
 
     const initialMessage = useTypewriter(
-        "   Hi! Thanks for stopping by :) I'm Sam's GPT trained on her resume. When you're ready, navigate to different chats on the sidebar to get to know her. To begin, select an option from the following to know more about her profile!",
+        "   You made it to my favorite part!! I have been an entrepreneur at heart since a very young age. ",
         handleTypewriterComplete
     );
 
@@ -32,17 +32,15 @@ const Entre = () => {
     };
 
     const options = [
-        "Give me a quick introduction to Samika",
-        "What's it like to work with Samika?",
-        "What is she like outside work?",
-        "I'm bored and I want to play a game"
+        "Tell me more about Akimas",
+        "Tell me more about Solstis",
+        "What is your purpose behind this?",
     ];
 
     const responses = {
-        "Give me a quick introduction to Samika": "    I'm Samika, a senior at the University of Pittsburgh pursuing a bachelors in Computer Science. Apart from stressing about my visa status, I love exploring and applying new tech!",
-        "What's it like to work with Samika?": "    need to add so tired rn",
-        "What is she like outside work?": "    i dont have a personality",
-        "I'm bored and I want to play a game": "   play with my heart"
+        "Tell me more about Akimas": "     ",
+        "Tell me more about Solstis": "    ",
+        "What is your purpose behind this?": "   ",
     };
 
     const handleButtonClick = (option) => {

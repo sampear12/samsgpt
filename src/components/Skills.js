@@ -22,10 +22,10 @@ Java, Python, HTML/CSS, JavaScript, C#, C
 AWS: IAM, EC2, EKS, Lambda functions, S3, CloudShell, Assume Role Management
 Docker, Kubernetes, Microservices, Serverless Architecture, Terraform
 
-<strong>FrontEnd Framework: </strong> 
-React, Angular, Android, Vercel, Bootstrap, Sphinx, Test automation, Functional and Regression testing
+<strong>FrontEnd: </strong> 
+React, Angular, Android, Vercel, Bootstrap, Sphinx, Test automation, Functional and Regression testing, Penetration testing
 
-<strong>Backend Frameworks:</strong> 
+<strong>Backend:</strong> 
 Flask, S3, DynamoDB, MongoDB
 
 <strong>Tools: </strong> 
@@ -55,7 +55,7 @@ Git, Atlassian Toolset (JIRA, Bitbucket, Confluence), IAPs (Identity-Aware Proxi
     ];
 
     const responses = {
-        "Experience in Programming Languages": `   I've been coding since I was 17 and have learnt a myriad of languages since. My years of experience in each: 
+        "Programming Languages": `   I've been coding for the past 5 years and have learnt a myriad of languages since. My years of experience in each: 
         
         Java: 5+ years
 
@@ -66,17 +66,17 @@ Git, Atlassian Toolset (JIRA, Bitbucket, Confluence), IAPs (Identity-Aware Proxi
         C#: 1 year
 
         C: 1 year`,
-        "Experience in Cloud": `    I have been working within the cloud for the past year with 3 months of concentrated experience working at Saviynt as a Cloud DevOps Intern.
+        "Cloud": `    I have been working within the cloud for the past year with 3 months of concentrated experience working at Saviynt as a Cloud DevOps Intern.
         
-        - managed roll creation, access management and assumRole functionality on IAM
+        •  managed roll creation, access management and assumRole functionality on IAM
 
-        - programatically created, stored and accessed datasets in S3 buckets
+        •  programatically created, stored and accessed datasets in S3 buckets
 
-        - created Lambda functions to execute hands-free automation
+        • created Lambda functions to execute hands-free automation
 
-        - created cloud cluster environment for customer access using EC2, EKS and Kubernetes
+        •  created cloud cluster environment for customer access using EC2, EKS and Kubernetes
 
-        - automated virtual session host creaton using EC2 `,
+        • automated virtual session host creaton using EC2 `,
         "FrontEnd/Backend Experience": `   Through my personal ventures, internship experiences and my role as founder in SAAS startups, I (tried to) learn the art of being a full stack developer! My projects with associated skills:
         
         <strong>FrontEnd:</strong>
@@ -99,25 +99,26 @@ Git, Atlassian Toolset (JIRA, Bitbucket, Confluence), IAPs (Identity-Aware Proxi
          "Tools": `   I learnt to use various different technical tools throughout my experiences:
          
          Git: 
-         - can execute various git commands including commit, rebase, cherrypick, resolve merge conflicts
-         - programatically change settings by generating and utilizing access tokens 
-         - studied the git API documentation
+         •  execution of various git commands including commits, rebase, cherrypick, resolving merge conflicts etc.
+         •  programatically changed repo settings, creates git pipelines etc by generating and utilizing access tokens 
+         •  studied the git API documentation extensively 
 
          Atlassian Toolset: 
-         - Utilized Jira to create, assign and arrange tasks
-         - Utilized BitBucket for creating test cases at Honeywell
-         - Utilized Confluence to create thorough code documentation and share files with my teams
+         •  Utilized Jira to create, assign and arrange tasks
+         •  Utilized BitBucket for creating test cases at Honeywell
+         •  Utilized Confluence to create thorough code documentation and share my work with the team
 
          Agile:
-         - Effectively participated in the Agile Development process with daily standups, sprint meetings etc
+         •  Effectively participated in the Agile Development process with daily standups, sprint meetings etc
 
          API documentation:
-         - Thoroughly documented API code base for over 100 test files at Honeywell
-         - Documented each method with the definition, input datatype and return type of each function.
+         •  Thoroughly documented API code bases for over 100 test files at Honeywell
+         •  Documented each method with the definition, input datatype and return type of each function.
+         • Proceeded to test and debug error prone methods
         
          Test Automation + Functional/Regression Testing: 
-         - Created test scripts at Honeywell for a voice enabled android application
-         - Performed Functional and Regressional Testing to ensure error proof transition to the latest deployment version`
+         •  Created test scripts at Honeywell for a voice enabled android application
+         •  Performed Functional and Regressional Testing to ensure error proof transition to the latest deployment version`
     };
 
     const handleButtonClick = (option) => {

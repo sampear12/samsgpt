@@ -15,7 +15,7 @@ const Education = () => {
     }, []);
 
     const initialMessage = useTypewriter(
-        `   I am currently a senior pursuing a bachelors of science in Computer Science at the University of Pittsburgh, PA.
+        `   I am currently a rising senior pursuing a bachelors of science in Computer Science at the University of Pittsburgh! I previously graduated from St Mary's High School (Pune, India) with a distinction in the ISC Board exams.
 
 Current GPA: 4:00
 Cumulative GPA: 3.45
@@ -25,7 +25,8 @@ Relevant Coursework:
 1) Data Structures and Algorithms
 2) Privacy and Security
 3) Software Engineering
-4) ...`,
+4) ...
+`,
         handleTypewriterComplete
     );
 
@@ -38,44 +39,13 @@ Relevant Coursework:
     };
 
     const options = [
-        "What were her favorite classes?",
-        "What is she like outside work?",
+        "What relevant CS coursework has she completed?",
+        "Where can I find a copy of her transcripts?",
     ];
 
     const responses = {
-        "What were her favorite classes?": `"  <strong>#1 When I believe in an idea, I pursue it wholeheartedly.</strong>
-
-        - At Saviynt, I pitched an idea I had to create in-house automations that would save 48min-1.2h/day for over 600 employees.
-        - The CEO approved of the POC, single coolest moment of my corporate life.
-
-
-        <strong>#2 Apart from my sense of humor, I also have a passion for making things more efficient.</strong>
-
-        - At Honeywell, I helped create the internal testing website which improved efficiency within the testing team by 30% in the first month. 
-        - I also replaced the background with the Elmo on fire meme, thereby making history in Pittsburgh's Honeywell office as the "Elmo intern". What's productivity without a lil humor?
-        
-
-        <strong>#3 Great things are never done by one person..</strong>
-
-        - Having led a team of 8 people at my startup, I learnt the fundamentals of leadership.
-        - No matter how good one may be, we are nothing without our team.`,
-        "What are her hobbies?": `"   Apart from coding the most random ideas at 3am I also enjoy:
-
-- cooking (especially Thai food)
-
-- painting, bowling, top golf 
-
-- volunteering at the animal shelter (let me know if you'd be interested as well!)
-
-- examining car engines (especially v8 sport cars)
-
-- rooting for Ferrari in Formula 1 races
-
-- always trying to find problems that I could turn into a startup!`,
-        "What is she like outside work?": `   <strong>"The key to success is happiness"</strong>
-
-I make sure to take time to do things that keep me mentally calm and refreshed. This includes giving enough time to develop the ideas that I am passionate about, spending time with friends and family, taking a break to pet a cute dog, and doing spontaneous things with my friends!`,
-        "I'm bored and I want to play a game": "   Sure! Here's a few games I love playing:"
+        "What relevant CS coursework has she completed?": ``,
+        "Where can I find a copy of her transcripts?": ` `,
     };
 
     const handleButtonClick = (option) => {
