@@ -1,51 +1,53 @@
 /* Global padding */
 body {
     padding: 16px;
-    box-sizing: border-box; /* Ensure padding doesn't add to width */
+    box-sizing: border-box;
 }
 
-.card {
-    padding: 16px;
-    box-sizing: border-box; /* Ensure padding doesn't add to width */
+/* Sidebar styles */
+.sidebar {
+    width: 200px; /* Default width for larger screens */
+    transition: width 0.3s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1000;
 }
 
-/* Small devices (phones, less than 600px) */
+/* Adjust sidebar for mobile devices (phones, less than 600px) */
 @media (max-width: 600px) {
-    .card {
-        width: 50px; /* Adjust the width for mobile view */
-        height: 100vh; /* Ensure full height on mobile */
+    .sidebar {
+       
         position: fixed;
+        height: 100vh; /* Full height on mobile */
     }
-    body {
-        padding: 8px;
+    .main-content {
+        margin-left: 0; /* Remove the margin to fill the screen */
+        padding: 16px; /* Adjust padding for better content fit */
     }
-    img, .card, .sidebar {
-        max-width: 100%; /* Ensure these elements do not exceed screen width */
-    }
-
-        .main-content {
-            margin-left: 50px; /* Adjust margin to match sidebar width */
-        }
-    
-    
-}
-
-/* Medium devices (tablets, 600px and up) */
-@media (min-width: 600px) and (max-width: 768px) {
-    body {
-        padding: 12px;
-    }
-    .card {
-        padding: 12px;
+    .top-left-icon {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        z-index: 1001;
     }
 }
 
-/* Large devices (desktops, 768px and up) */
-@media (min-width: 768px) {
-    body {
-        padding: 16px;
+/* Adjustments for larger devices (tablets, desktops) */
+@media (min-width: 600px) {
+    .main-content {
+        margin-left: 250px; /* Adjust margin to account for sidebar width */
     }
-    .card {
-        padding: 16px;
-    }
+}
+
+/* Adjustments for sidebar collapse */
+.sidebar.collapsed {
+    width: 70px; /* Adjust the width when sidebar is collapsed */
+    transition: width 0.3s;
+}
+
+.profile-button.collapsed span {
+    display: none; /* Hide text in collapsed state */
 }
