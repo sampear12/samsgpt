@@ -1,8 +1,13 @@
 .sidebar {
   width: 2px;
   transition: width 0.3s;
+  position: fixed; /* Make the sidebar fixed */
+  top: 0;
+  left: 0;
+  height: 100vh; /* Ensure it covers the full height of the viewport */
+  overflow-y: auto; /* Allow scrolling within the sidebar if its content is longer than the viewport */
+  z-index: 1000; /* Ensure it stays above other content */
 }
-
 .sidebar.collapsed {
   width: 10px;
   
