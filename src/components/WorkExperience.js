@@ -31,7 +31,6 @@ const WorkExperience = () => {
 `,
         handleTypewriterComplete
     );
-
     const handleScrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
@@ -40,11 +39,29 @@ const WorkExperience = () => {
         window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
     };
 
-    const options = [
+    const [currentResponse, setCurrentResponse] = useState('');
+    
+    const handleButtonClick = (option) => {
+        const answer = responses[option];
+        setActiveQuestion(option);
+        setChatHistory(prevHistory => [...prevHistory, { question: option, answer }]);
+        setRemainingOptions(prevOptions => prevOptions.filter(opt => opt !== option)); // Filter out the clicked option
+        setShowOptions(false); // Hide options during answering
+        setIsAnswering(true); // Set answering state
+        setCurrentResponse(answer);
+              // Simulate a delay to allow the answer to "type out" before showing options again
+              setTimeout(() => {
+                setIsAnswering(false); // Answering done
+                handleTypewriterComplete(); // Show options again
+            }, answer.length * 5); // Adjust the timing based on answer length (simulated typing time)
+        
+    };
+
+    const [remainingOptions, setRemainingOptions] = useState([
         "Cloud Devops Intern @ Saviynt",
         "Test Engineering Intern @ Honeywell",
         "Web Dev Intern @ YouthPlaces",
-    ];
+    ]);
 
     const responses = {
         "Cloud Devops Intern @ Saviynt": `   `,
@@ -101,19 +118,6 @@ const WorkExperience = () => {
          - Created test scripts at Honeywell for a voice enabled android application
          - Performed Functional and Regressional Testing to ensure error proof transition to the latest deployment version`
     };
-
-    const handleButtonClick = (option) => {
-        const answer = responses[option];
-        setActiveQuestion(option);
-        setChatHistory(prevHistory => [...prevHistory, { question: option, answer }]);
-        setShowOptions(false); // Hide options during answering
-        setIsAnswering(true); // Set answering state
-        setTimeout(() => { // Simulate delay for answering
-            setIsAnswering(false);
-            setShowOptions(true); // Show options after answering
-        }, 1000);
-    };
-
     return (
         <div className="scroll-container">
             <div className="main-content">
@@ -138,28 +142,28 @@ const WorkExperience = () => {
                     ))}
                 </div>
                 <div className="options-with-image">
-                    {showOptions && (
-                        <div className="options-container">
-                            {options.map((option, index) => (
-                                <div key={index} className="option-item">
-                                    <Button
-                                        label={option}
-                                        onClick={() => handleButtonClick(option)}
-                                        isSelected={false}
-                                    />
-                                    {index === options.length - 1 && (
-                                        <img src="https://assets.api.uizard.io/api/cdn/stream/347c912a-0054-4a72-a32b-5e8b9d5af74d.png" alt="icon" className="option-icon" />
-                                    )}
-                                </div>
-                            ))}
+                {showOptions && (
+                <div className="options-container">
+                    {remainingOptions.map((option, index) => (
+                        <div key={index} className="option-item">
+                            <Button
+                                label={option}
+                                onClick={() => handleButtonClick(option)}
+                                isSelected={false}
+                            />
+                            {index === remainingOptions.length - 1 && (
+                                <img src="https://assets.api.uizard.io/api/cdn/stream/347c912a-0054-4a72-a32b-5e8b9d5af74d.png" alt="icon" className="option-icon" />
+                            )}
                         </div>
-                    )}
+                    ))}
+                </div>
+            )}
+
                 </div>
             </div>
         </div>
     );
 };
-
 // Styles for the Button component
 const styles = {
     Button: {

@@ -13,7 +13,7 @@ const useTypewriter = (text, onComplete) => {
         const speed = isMobile ? 4 : 4; // Adjust speed as needed, 50ms for mobile, 100ms for desktop
 
         const intervalId = setInterval(() => {
-            if (currentIndex < text.length) {
+            if (currentIndex < text.length-1) {
                 setDisplayedText((prev) => prev + text[currentIndex]);
                 currentIndex++;
             } else {
