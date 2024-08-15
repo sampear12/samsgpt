@@ -77,7 +77,7 @@ Apart from this, in my free time I write songs, play the piano, play soccer, spi
 • Converted sensory signals to assembly language using ROS and Arduino to program a life-size intended F1 car.
 • Completed coursework on ROS, Linux, and Optimization Theory to get the vehicle ready for competition.`,
         "SheInnovates": `Developed an application for OCD therapy with integrated sensors using HTML, Python, and Figma! `,
-        "f it we ball": "    bet, try putting on escape from LA and lmk what you think"
+        
     };
 
     return (
