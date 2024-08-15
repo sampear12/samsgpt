@@ -17,7 +17,7 @@ const Intro = () => {
     const initialMessage = useTypewriter(
         `   Hi! Thanks for visiting and welcome to SamsGPT 1.0 :)
 
-        My name is Samika Sanghvi and I'm working on developing an AI version of myself. Since the model is still under development, I thought it would be a fun idea to create a GPT emulation before I officially release it!
+        My name is Samika Sanghvi and I'm working on creating an AI version of myself. Since the model is still under development, I thought it would be a fun idea to create a GPT emulation of it before I officially release it on the website!
         This is a static website where you can explore different parts of my resume from the navigation bar to your left. 
 
         Since you're here, I'd love your thoughts/feedback on the current UI. If you'd like to connect with me:

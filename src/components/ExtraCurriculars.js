@@ -59,25 +59,19 @@ Apart from this, in my free time I write songs, play the piano, play soccer, spi
     };
 
     const [remainingOptions, setRemainingOptions] = useState([
-        "WICS",
-        "Lothrop Hall Council",
-        "FSAE Panther Racing",
-        "SheInnovates"
+        "Hi!",
+        "Can you tell me about yourself?",
+        "No, we're not a chef, we are an entrepreneur and a software developer",
+        "Okay, can you tell me about yourself?"
         
     ]);
 
     const responses = {
-        "WICS": `  <strong>Vice-President, Women in Computer Science (WICS), Pittsburgh, PA    2023-2024 </strong>
-
-• Introduced fortune 100 sponsors and technical workshops for underrepresented student communities.`,
-        "Lothrop Hall": `<strong> President, Lothrop Hall Council, Pittsburgh, PA    2022-2023 </strong>
-        
-        • Lead a council of students and resident assistants to organize bi-weekly events for over 600 student residents.`,
-        "FSAE Panther Racing": `   <strong>Club Member, Pitt FSAE Panther Racing, Pittsburgh, PA   2022-present </strong>
-• Converted sensory signals to assembly language using ROS and Arduino to program a life-size intended F1 car.
-• Completed coursework on ROS, Linux, and Optimization Theory to get the vehicle ready for competition.`,
-        "SheInnovates": `Developed an application for OCD therapy with integrated sensors using HTML, Python, and Figma! `,
-        
+        "Hi!": `  Hi! I'm Samika. It's nice to meet you!`,
+        "Can you tell me about yourself?": `    Sure! I'm currently a senior studying Computer Science at Pitt. I'm an entrepreneur and a chef!`,
+        "No, we're not a chef, we are an entrepreneur and a software developer": `   Sorry!`,
+        "Okay, can you tell me about yourself?": ` Sure! I'm currently a senior studying Computer Science at Pitt. I'm an entrepreneur and a part-time chef and a software engineer and a chef and a software engineer and a`,
+        "A for effort": "    Thank you!"
     };
 
     return (
