@@ -15,7 +15,7 @@ const MainContent = () => {
     }, []);
 
     const initialMessage = useTypewriter(
-        `   I'm Samika, a senior at Pitt studying Computer Science. A quick introduction:
+        `   I'm Samika, a senior at Pitt studying Computer Science :) A quick introduction:
 
 •  I graduate in 2025 with a degree in Computer Science at the <a href="https://www.pitt.edu/" target="_blank" style="text-decoration: underline; color: inherit;">University of Pittsburgh</a> (Dean's List '24 and '23). I am also an international student from India in the USA on an F1 visa :)
 
