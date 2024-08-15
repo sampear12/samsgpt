@@ -3,9 +3,28 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #1e1e1e;
   color: white;
+  overflow: hidden; /* Prevent scrolling on the entire page */
 }
 
 .App {
   display: flex;
   height: 100vh;
+  overflow: hidden; /* Ensure the App container does not scroll */
+}
+
+.sidebar {
+  width: 25px; /* Fixed width for the sidebar */
+  background-color: #b40c0c;
+  flex-shrink: 0; /* Prevent shrinking */
+  position: fixed; /* Fixes the sidebar in place */
+  height: 100vh; /* Full height of the viewport */
+  overflow-y: auto; /* Allows sidebar content to scroll if necessary */
+}
+
+.main-content {
+  flex-grow: 1;
+  margin-left: 2px; /* Ensure it starts after the sidebar */
+  height: 100vh;
+  overflow-y: auto; /* Allow scrolling only in the main content */
+  padding: 20px; /* Add some padding if needed */
 }

@@ -16,7 +16,7 @@ const Card = ({ children, style }) => {
     top: '0px',
     left: '0px',
     width: getResponsiveWidth(), // Responsive width
-    height: '90vh',
+    height: '100vh',
     backgroundColor: '#171717',
     borderRadius: '0px',
     display: 'flex',
