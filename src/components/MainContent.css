@@ -4,6 +4,7 @@
     overflow: auto; /* Enable scrolling */
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 .main-content {
     padding: 16px;
