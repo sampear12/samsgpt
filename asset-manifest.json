@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/samsgpt/static/css/main.83d94dd3.chunk.css",
+    "main.css": "/samsgpt/static/css/main.fdffcad5.chunk.css",
     "main.js": "/samsgpt/static/js/main.9ab8545e.chunk.js",
     "main.js.map": "/samsgpt/static/js/main.9ab8545e.chunk.js.map",
     "runtime-main.js": "/samsgpt/static/js/runtime-main.2c78a641.js",
@@ -8,13 +8,13 @@
     "static/js/2.4f897b00.chunk.js": "/samsgpt/static/js/2.4f897b00.chunk.js",
     "static/js/2.4f897b00.chunk.js.map": "/samsgpt/static/js/2.4f897b00.chunk.js.map",
     "index.html": "/samsgpt/index.html",
-    "static/css/main.83d94dd3.chunk.css.map": "/samsgpt/static/css/main.83d94dd3.chunk.css.map",
+    "static/css/main.fdffcad5.chunk.css.map": "/samsgpt/static/css/main.fdffcad5.chunk.css.map",
     "static/js/2.4f897b00.chunk.js.LICENSE.txt": "/samsgpt/static/js/2.4f897b00.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2c78a641.js",
     "static/js/2.4f897b00.chunk.js",
-    "static/css/main.83d94dd3.chunk.css",
+    "static/css/main.fdffcad5.chunk.css",
     "static/js/main.9ab8545e.chunk.js"
   ]
 }
