@@ -126,14 +126,21 @@ I make sure to take time to do things that keep me mentally calm and refreshed. 
                         </div>
                     </div>
                     {chatHistory.map((chat, index) => (
-                        <div key={index} className="chat-entry">
-                            <div className="question-container">
-                                <div style={styles.Button} className="question-style">{chat.question}</div>
-                                <img src="https://assets.api.uizard.io/api/cdn/stream/347c912a-0054-4a72-a32b-5e8b9d5af74d.png" alt="icon" className="side-icon" />
-                            </div>
-                            <QuestionAnswer question={chat.question} answer={chat.answer} />
-                        </div>
-                    ))}
+    <div key={index} className="chat-entry">
+        <div className="question-container" style={{ display: 'flex', flexDirection: 'column' }}>
+            <div style={styles.Button} className="question-style">{chat.question}</div>
+            <img 
+                src="https://assets.api.uizard.io/api/cdn/stream/347c912a-0054-4a72-a32b-5e8b9d5af74d.png" 
+                alt="icon" 
+                className="side-icon" 
+                style={{ flexShrink: 0, marginTop: '10px' }} 
+            />
+        </div>
+        <QuestionAnswer question={chat.question} answer={chat.answer} />
+    </div>
+))}
+
+
                 </div>
                 <div className="options-with-image">
                 {showOptions && (
