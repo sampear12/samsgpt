@@ -16,8 +16,7 @@ const MainContent = () => {
 
     const initialMessage = useTypewriter(
         `  Congrats, you made it to my favorite part!! As a kid, it was practically impossible to seperate me from my copy of the <a href=" https://www.goodreads.com/book/show/11084145-steve-jobs" target="_blank" style="text-decoration: underline; color: inherit;">autobiography of Steve Jobs</a>. Not because I was obsessed with him, but because i was obsessed with the Idea of changing the world. To be fair, 10 year old Sam didn't understand how big the world <em>really</em> was. 
-         ---------------------------------------------------------------------------------------------------------------------------------------
-        I started my first company, AkimasBakingCo, in 2020 with the aim to fund breast cancer treatments for underpriviledged women. 
+        
         At the time, Ubereats and other food delivery software were out of business in my hometown, Pune (India). I saw this opening in the market as a chance to deploy a simple yet effectively cloud kitchen in the city.
         I developed a script that would:
         1) intake food orders through a google form on the company's instagram (including customer address and contact info)
@@ -26,7 +25,7 @@ const MainContent = () => {
         4) within 30-60 mins the food would be at the users door. Contactless, efficient and profitable. 
 
         Click the option below if you're curious to know how that ended :)
-        ---------------------------------------------------------------------------------------------------------------------------------------
+        
         I started my second "company", Solstis, in college. My co-founders (shoutout to Pratik and Shorya) and I built a POC for an AI and Cloud driven platform that would:
         1) guide early stage entrepreneurs through the process of converting their ideas from a POC to a business model
         2) connect entrepreneurs in the area with each other as well as investors, advisors etc.
@@ -35,7 +34,7 @@ const MainContent = () => {
         We recieved funding from Microsofts Founder's Hub, incubated into Carnegie Mellon's Schwartz Center of Entrepreneurship and the Pitt Big Ideas Center. Through their support, our bootstrap cost was nearly $0 (thank god)
 
         Click the Solstis option to know what happened!
-        ---------------------------------------------------------------------------------------------------------------------------------------
+
         My most recent project that I'm hoping to turn into the next million $ idea (jk, kinda) is a software that automates the ticket assigning process in management tools like Jira using AI. 
         Our goal is to use AI to make teams within any-size companies more efficient by:
         1) reducing ticket backlog by analyzing sprint requirements 

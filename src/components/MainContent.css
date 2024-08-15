@@ -1,11 +1,21 @@
 /* Wrapper for the entire main content */
 .scroll-container {
     height: 100vh; /* Full viewport height */
+    width: 100%;
     overflow: auto; /* Enable scrolling */
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
 }
+/* Main container */
+.main-container {
+    width: 100%; /* Ensure it takes full screen width */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box; /* Include padding/border in width */
+    margin: 0 auto; /* Center align the container */
+    padding: 0 10px; /* Optional: Add padding to prevent content from touching the edges */
+}
+
 .main-content {
     padding: 16px;
     box-sizing: border-box;
@@ -89,20 +99,18 @@ button:hover {
 
 .option-item {
     display: flex;
-    align-items: center;
-    margin-bottom: 10px; /* Add space between options */
-    flex-shrink: 0;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Text on left, icon on right */
+    width: 100%; /* Ensure it takes full screen width */
+    margin-bottom: 10px; /* Space between options */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
-
 .option-icon {
-    width: 50px;
-    height: 50px;
-    margin-left: 10px; /* Space between button and icon */
-    border-radius: 50%;
-    overflow: hidden;
-    flex-shrink: 0; /* Ensure the icon doesn't shrink */
-    flex-grow: 0; /* Ensure the icon doesn't grow */
-    flex-basis: 50px; /* Fixed size */
+    width: 50px; /* Fixed width for the icon */
+    height: 50px; /* Fixed height for the icon */
+    margin-left: 10px; /* Space between text and icon */
+    border-radius: 50%; /* Circular icon */
+    flex-shrink: 0; /* Prevent the icon from shrinking */
 }
 
 .side-icon {
@@ -115,7 +123,7 @@ button:hover {
     flex-shrink: 0; /* Ensure the icon doesn't shrink */
     flex-grow: 0; /* Ensure the icon doesn't grow */
     flex-basis: 50px; /* Fixed size */
-    align-self: center;
+    align-self: right;
     display:block;
 }
 
@@ -139,7 +147,7 @@ button:hover {
     font-family: 'Roboto';
     line-height: 18px;
     outline: none;
-    margin: 5px 0;
+    margin: 0px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -173,25 +181,22 @@ button:hover {
 }
 
 .question-style {
-    background-color: #2f2f2f;
-    color: #ececec;
-    padding: 10px 20px;
-    border-radius: 22px;
-    font-size: 13px;
-    font-family: 'Roboto';
-    line-height: 18px;
-    flex-grow: 1; /* Allow the text container to grow */
-    display: flex;
-    align-items: center;
-    flex-shrink: 1; /* Allow the text container to shrink */
+    flex-grow: 1;
+    margin-right: 10px; /* Space between text and icon */
+    text-align: left; /* Align text to the left */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Ensure text doesn't overflow */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
 }
+
 
 .question-container {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: flex-start; /* Align text to the start */
+    align-items: center; /* Align items vertically centered */
+    justify-content: space-between; /* Ensure text is on the left and icon on the right */
     margin-bottom: 5px;
-    margin-left: auto;
-    flex-shrink: 0;
-
+    width: 100%; /* Ensure the container takes full width */
+    padding-right: 10px; /* Prevent content from hitting the edge */
+    box-sizing: border-box; /* Include padding in width calculation */
+    overflow: visible; /* Ensure no overflow cutting content */
 }

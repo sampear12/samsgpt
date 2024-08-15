@@ -8,6 +8,7 @@ body {
 
 .App {
   display: flex;
+  flex-direction: row;
   height: 100vh;
   overflow: hidden; /* Ensure the App container does not scroll */
 }
@@ -29,6 +30,7 @@ body {
   overflow-y: auto; /* Allow vertical scrolling only */
   overflow-x: hidden; /* Prevent horizontal scrolling */
   padding: 20px;
+  box-sizing: border-box;
   transition: margin-left 0.3s ease; /* Smooth transition for expanding */
   width: calc(100% ); /* Dynamically calculate the width */
 }
@@ -38,3 +40,4 @@ body {
   width: calc(100% ); /* Dynamically calculate the width */
 
 }
+

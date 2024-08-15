@@ -15,20 +15,20 @@ const ExtraCurricular = () => {
     }, []);
 
     const initialMessage = useTypewriter(
-        `   <strong>Vice-President, Women in Computer Science (WICS), Pittsburgh, PA    2023-2024 </strong>
+        `   I've been a part of a myriad of clubs and attempted to follow many of my non-coding passions (like being a singer haha). Some of the clubs I'm involved in:
+        
+<strong>Vice-President, Women in Computer Science (WICS), Pittsburgh, PA    2023-2024 </strong>
 
 <strong> President, Lothrop Hall Council, Pittsburgh, PA    2022-2023 </strong>
 
-• Lead a council of students and resident assistants to organize bi-weekly events for over 600 student residents.
-
 <strong>Club Member, Pitt FSAE Panther Racing, Pittsburgh, PA   2022-present </strong>
-
-• Converted sensory signals to assembly language using ROS and Arduino to program a life-size intended F1 car.
-• Completed coursework on ROS, Linux, and Optimization Theory to get the vehicle ready for competition.
 
 <strong> Hackathon, SheInnovates, Pittsburgh, PA     2023 </strong>
 
-• Developed an application for OCD therapy with integrated sensors using HTML, Python, and Figma`,
+I'm also extremely passionate about women empowerment in technology. I attend events like the Grace Hopper Conference and WECode to advocate for this!
+
+Apart from this, in my free time I write songs, play the piano, play soccer, spikeball, volleyball and am currently trying to learn MMA! I'm also hoping to continue my passion for surfing after graduating :))
+`,
         handleTypewriterComplete
     );
 
@@ -62,7 +62,7 @@ const ExtraCurricular = () => {
         "WICS",
         "Lothrop Hall Council",
         "FSAE Panther Racing",
-        "f it we ball",
+        "SheInnovates",
         "I'm bored of my current playlist, can you recommend smth?"
     ]);
 
@@ -76,7 +76,7 @@ const ExtraCurricular = () => {
         "FSAE Panther Racing": `   <strong>Club Member, Pitt FSAE Panther Racing, Pittsburgh, PA   2022-present </strong>
 • Converted sensory signals to assembly language using ROS and Arduino to program a life-size intended F1 car.
 • Completed coursework on ROS, Linux, and Optimization Theory to get the vehicle ready for competition.`,
-        "I'm bored of my current playlist, can you recommend smth?": "   i feel you, we've been listening to posty on loop. Do you want to try the weeknd?",
+        "SheInnovates": `Developed an application for OCD therapy with integrated sensors using HTML, Python, and Figma! `,
         "f it we ball": "    bet, try putting on escape from LA and lmk what you think"
     };
 

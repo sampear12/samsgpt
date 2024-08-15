@@ -1,26 +1,28 @@
-// Importing necessary React hooks and components
 import React, { useState, useCallback } from 'react';
-
 import CustomImage from './CustomImage';
 import useTypewriter from '../hooks/Typewriter';
 import QuestionAnswer from './QuestionAnswer';
 import './MainContent.css';
 
-// Define the MainContent component
 const Links = () => {
     const [chatHistory, setChatHistory] = useState([]); // State to store chat history
     const [showOptions, setShowOptions] = useState(false);
     const [isAnswering, setIsAnswering] = useState(false);
-    const [activeQuestion, setActiveQuestion] = useState(''); // Add this line
-
+    const [activeQuestion, setActiveQuestion] = useState('');
 
     const handleTypewriterComplete = useCallback(() => {
         setShowOptions(true); // Show options after initial message
     }, []);
-    
 
     const initialMessage = useTypewriter(
-        "   Hi! Thanks for stopping by :) I'm Sam's GPT trained on her resume. When you're ready, navigate to different chats on the sidebar to get to know her. To begin, select an option from the following to know more about her profile!",
+        `   Thank you for visiting my website! I'd love to connect with you on:
+
+        LinkedIn: <a href="https://www.linkedin.com/in/samika-sanghvi/" target="_blank" style="text-decoration: underline; color: inherit;">Samika Sanghvi</a>
+        Email: sps76@pitt.edu
+        Phone: +1 412-651-2512
+
+        Talk to you soon!
+`,
         handleTypewriterComplete
     );
 
@@ -32,32 +34,41 @@ const Links = () => {
         window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
     };
 
-    const options = [
-        "Give me a quick introduction to Samika",
-        "What's it like to work with Samika?",
-        "What is she like outside work?",
-        "I'm bored and I want to play a game"
-    ];
-
-    const responses = {
-        "Give me a quick introduction to Samika": "    I'm Samika, a senior at the University of Pittsburgh pursuing a bachelors in Computer Science. Apart from stressing about my visa status, I love exploring and applying new tech!",
-        "What's it like to work with Samika?": "    need to add so tired rn",
-        "What is she like outside work?": "    i dont have a personality",
-        "I'm bored and I want to play a game": "   play with my heart"
-    };
-
+    const [currentResponse, setCurrentResponse] = useState('');
+    
     const handleButtonClick = (option) => {
         const answer = responses[option];
-        setActiveQuestion(option); // Add this line
+        setActiveQuestion(option);
         setChatHistory(prevHistory => [...prevHistory, { question: option, answer }]);
+        setRemainingOptions(prevOptions => prevOptions.filter(opt => opt !== option)); // Filter out the clicked option
         setShowOptions(false); // Hide options during answering
         setIsAnswering(true); // Set answering state
-        setTimeout(() => { // Simulate delay for answering
-            setIsAnswering(false);
-            setShowOptions(true); // Show options after answering
-        }, 1000);
+        setCurrentResponse(answer);
+              // Simulate a delay to allow the answer to "type out" before showing options again
+              setTimeout(() => {
+                setIsAnswering(false); // Answering done
+                handleTypewriterComplete(); // Show options again
+            }, answer.length * 5); // Adjust the timing based on answer length (simulated typing time)
+        
     };
-    
+
+    const [remainingOptions, setRemainingOptions] = useState([
+    ]);
+
+    const responses = {
+        "WICS": `  <strong>Vice-President, Women in Computer Science (WICS), Pittsburgh, PA    2023-2024 </strong>
+
+• Introduced fortune 100 sponsors and technical workshops for underrepresented student communities.`,
+        "Lothrop Hall": `<strong> President, Lothrop Hall Council, Pittsburgh, PA    2022-2023 </strong>
+        
+        • Lead a council of students and resident assistants to organize bi-weekly events for over 600 student residents.`,
+        "FSAE Panther Racing": `   <strong>Club Member, Pitt FSAE Panther Racing, Pittsburgh, PA   2022-present </strong>
+• Converted sensory signals to assembly language using ROS and Arduino to program a life-size intended F1 car.
+• Completed coursework on ROS, Linux, and Optimization Theory to get the vehicle ready for competition.`,
+        "SheInnovates": `Developed an application for OCD therapy with integrated sensors using HTML, Python, and Figma! `,
+        "f it we ball": "    bet, try putting on escape from LA and lmk what you think"
+    };
+
     return (
         <div className="scroll-container">
             <div className="main-content">
@@ -68,44 +79,44 @@ const Links = () => {
                     <div className="message">
                         <CustomImage />
                         <div className="message-content">
-                            <p>{initialMessage}</p>
+                            <p dangerouslySetInnerHTML={{ __html: initialMessage.replace(/\n/g, '<br />') }}></p>
                         </div>
                     </div>
                     {chatHistory.map((chat, index) => (
-        <div key={index} className="chat-entry">
-            <div className="question-container">
-                <div style={styles.Button} className="question-style">{chat.question}</div>
-                <img src="https://assets.api.uizard.io/api/cdn/stream/347c912a-0054-4a72-a32b-5e8b9d5af74d.png" alt="icon" className="side-icon" />
-            </div>
-            <QuestionAnswer question={chat.question} answer={chat.answer} />
-        </div>
-    ))}
-
-
-            </div>
-            
-            <div className="options-with-image">
-                    {showOptions && (
-                        <div className="options-container">
-                            {options.map((option, index) => (
-                                <div key={index} className="option-item">
-                                    <Button
-                                        label={option}
-                                        onClick={() => handleButtonClick(option)}
-                                        isSelected={false}
-                                    />
-                                    {index === options.length - 1 && (
-                                        <img src="https://assets.api.uizard.io/api/cdn/stream/347c912a-0054-4a72-a32b-5e8b9d5af74d.png" alt="icon" className="option-icon" />
-                                    )}
-                                </div>
-                            ))}
+                        <div key={index} className="chat-entry">
+                            <div className="question-container">
+                                <div style={styles.Button} className="question-style">{chat.question}</div>
+                                <img src="https://assets.api.uizard.io/api/cdn/stream/347c912a-0054-4a72-a32b-5e8b9d5af74d.png" alt="icon" className="side-icon" />
+                            </div>
+                            <QuestionAnswer question={chat.question} answer={chat.answer} />
                         </div>
-                    )}
+                    ))}
+                </div>
+                <div className="options-with-image">
+                {showOptions && (
+                <div className="options-container">
+                    {remainingOptions.map((option, index) => (
+                        <div key={index} className="option-item">
+                            <Button
+                                label={option}
+                                onClick={() => handleButtonClick(option)}
+                                isSelected={false}
+                            />
+                            {index === remainingOptions.length - 1 && (
+                                <img src="https://assets.api.uizard.io/api/cdn/stream/347c912a-0054-4a72-a32b-5e8b9d5af74d.png" alt="icon" className="option-icon" />
+                            )}
+                        </div>
+                    ))}
+                </div>
+            )}
+
                 </div>
             </div>
         </div>
     );
 };
+
+
 // Styles for the Button component
 const styles = {
     Button: {

@@ -6,8 +6,7 @@ const TutorialOverlay = ({ onDismiss }) => {
 
   useEffect(() => {
     const highlightConfigs = [
-      { selector: '.top-left-icon', text: 'Click here to collapse the sidebar.' }, // Ensure the correct selector
-  
+      { selector: '.top-left-icon', text: 'Click here to collapse the sidebar.' },
       { selector: '.previous-conversations', text: 'Explore other parts of my resume' },
     ];
 
@@ -48,7 +47,7 @@ const TutorialOverlay = ({ onDismiss }) => {
             height: `${highlight.height}px`,
           }}
         >
-          <div className="highlight-text" style={{ top: `${highlight.height + 10}px` }}>
+          <div className="highlight-text" style={{ top: `${highlight.height +10}px` }}>
             {highlight.text}
           </div>
         </div>

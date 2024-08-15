@@ -5,7 +5,9 @@ import CustomImage from './CustomImage';
 import TopIcons from './TopIcons';
 import ProfileButton from './ProfileButton';
 import TutorialOverlay from './TutorialOverlay'; // Import the TutorialOverlay
+
 import './Sidebar.css';
+
 
 const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -59,37 +61,55 @@ const Sidebar = () => {
 
   return (
     <Card style={collapsed ? collapsedStyles : {}}>
-      <div className="top-left-icon" onClick={handleToggle}>
-        <TopIcons collapsed={collapsed} />
-      </div>
-      <div style={{ marginTop: '20px', marginBottom: '40px', marginLeft: `0px` }}>
-        <div style={{ display: 'flex', alignItems: 'center' }} className="profile-button">
-          <CustomImage />
-          {!collapsed && <span style={{ color: '#ffffff', fontSize: getResponsiveFontSize() }}>Sam's GPT</span>}
+        <div className="top-left-icon" onClick={handleToggle}>
+            <TopIcons collapsed={collapsed} />
         </div>
-      </div>
+        <div style={{ marginTop: '20px', marginBottom: '40px', marginLeft: `5px` }}>
+            <div style={{ display: 'flex', alignItems: 'center' }} className="profile-button">
+                <CustomImage />
+                {!collapsed && (
+                    <span 
+                        style={{ 
+                            color: '#ffffff', 
+                            fontSize: getResponsiveFontSize(), 
+                            marginLeft: '10px'  // Add margin here to create space
+                        }}
+                    >
+                        Sam's GPT
+                    </span>
+                )}
+            </div>
+        </div>
+
+      
     
-      <Link to="/profile">
-  <ProfileButton
-    text="Profile"
-    active={location.pathname === '/profile'}
-    collapsed={collapsed}
-    className="profile-button"
-    style={{
-      fontSize: getResponsiveFontSize(),
-      marginLeft: '10px',  // Apply the same marginLeft as Prev. Conversations
-      padding: '0', // Ensure no extra padding
-    }}
-  />
+      <Link to="/intro">
+      <Link to="/">
+        <ProfileButton
+          text="Intro"
+          active={location.pathname === '/' || location.pathname === '/intro'} // Active for both paths
+          collapsed={false} // or your state-controlled collapsed variable
+        />
+      </Link>
+  
 </Link>
 
 
       <div style={{ marginTop: '25px', marginLeft: `10px`,color: '#b4b4b4' }} className="previous-conversations">
-        {!collapsed && <span style={{ fontSize: getResponsiveFontSize() }}>Prev. Conversations</span>}
+        {!collapsed && <span style={{ fontSize: getResponsiveFontSize() }}>Conversations</span>}
       </div>
       {!collapsed && (
         <div style={{ backgroundColor: '#ffffff', height: '2px', width: '100%', margin: '10px 0' }}></div>
       )}
+      <Link to="/profile">
+        <ProfileButton
+          text="Profile"
+          active={location.pathname === '/profile'}
+          collapsed={collapsed}
+          style={{ fontSize: getResponsiveFontSize() }} // Adjust font size dynamically
+        />
+      </Link>
+
       <Link to="/work-experience">
         <ProfileButton
           text="Work Experience"

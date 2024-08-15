@@ -1,29 +1,49 @@
 .tutorial-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    pointer-events: auto; /* Enable clicking to dismiss */
-  }
-  
-  .highlight {
-    position: absolute;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  pointer-events: auto; /* Enable clicking to dismiss */
+}
+
+.highlight {
+  position: absolute;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+}
+
+.highlight-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Default font size for larger screens (like laptops) */
+.highlight-text {
+  font-size: 1vw;
+}
+
+/* Adjust font size for medium screens (like tablets) */
+@media screen and (max-width: 1024px) {
   .highlight-text {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.7); /* More transparent background */
-    color: #000;
-    padding: 5px 10px;
-    border-radius: 50px; /* Adjusted to 10px for consistency */
-    white-space: nowrap;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-size: 1vw;
   }
+}
+
+/* Adjust font size for small screens (like phones) */
+@media screen and (max-width: 768px) {
+  .highlight-text {
+    font-size: 2vw;
+  }
+}

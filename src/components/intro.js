@@ -4,7 +4,7 @@ import useTypewriter from '../hooks/Typewriter';
 import QuestionAnswer from './QuestionAnswer';
 import './MainContent.css';
 
-const WorkExperience = () => {
+const Intro = () => {
     const [chatHistory, setChatHistory] = useState([]); // State to store chat history
     const [showOptions, setShowOptions] = useState(false);
     const [isAnswering, setIsAnswering] = useState(false);
@@ -15,30 +15,20 @@ const WorkExperience = () => {
     }, []);
 
     const initialMessage = useTypewriter(
-        `   I have had a myriad of professional experiences that have shaped my technical and interpersonal skills. Click on the options below to learn more about each individual experience!
-        
-        <strong>Cloud DevOps Intern</strong>
-        <a href="https://saviynt.com/" target="_blank" style="text-decoration: underline; color: inherit;">Saviynt</a> Los Angeles, CA
-        May-August 2023
-        <em>Skills: AWS Lambda, IAM, EC2, S3, DynamoDB, boto3, SES, Git automation, Python, Java, Virtru, SalesForce, Atlassian (Jira, Confluence)</em>
-         
-        <strong>Test Engineering Intern</strong>
-        <a href="https://www.honeywell.com/us/en" target="_blank" style="text-decoration: underline; color: inherit;">Honeywell</a>, Pittsburgh, PA
-        May-August 2023
-<em>Skills: Python, Java, GitHub, Agile, Android, Bootstrap, Sphinx, Flask, API documentation, Test automation, Functional and Regression testing, Atlassian Toolset (JIRA, Bitbucket, Confluence), Appium and Selenium, SourceTree</em> 
+        `   Hi! Thanks for visiting and welcome to SamsGPT 1.0 :)
 
-<strong>Undergraduate Teaching Assistant</strong>
-<a href="https://www.pitt.edu/" target="_blank" style="text-decoration: underline; color: inherit;">University of Pittsburgh</a>, Pittsburgh, PA    
-2023-2024 
-<em>Skills: Using memes as an effective strategy to explain difficult concepts</em>
+        My name is Samika Sanghvi and I'm working on developing an AI version of myself. Since the model is still under development, I thought it would be a fun idea to create a GPT emulation before I officially release it!
+        This is a static website where you can explore different parts of my resume from the navigation bar to your left. 
 
-<strong>Website Development Intern</strong>
-<a href="https://youthplaces.org/" target="_blank" style="text-decoration: underline; color: inherit;">YouthPlaces</a>, Pittsburgh, PA 
-January-May 2023
-<em>Skills: HTML, CSS, JS, WordPress</em>
+        Since you're here, I'd love your thoughts/feedback on the current UI. If you'd like to connect with me:
+        LinkedIn: <a href="https://www.linkedin.com/in/samika-sanghvi/" target="_blank" style="text-decoration: underline; color: inherit;">Samika Sanghvi</a>
+        Email: sps76@pitt.edu
+
+        Feel free to explore and have fun with the current design!
 `,
         handleTypewriterComplete
     );
+
     const handleScrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
@@ -66,38 +56,22 @@ January-May 2023
     };
 
     const [remainingOptions, setRemainingOptions] = useState([
-        "Cloud Devops Intern @ Saviynt",
-        "Test Engineering Intern @ Honeywell",
-        "Undergraduate Teaching Assistant",
-        "Web Dev Intern @ YouthPlaces",
     ]);
 
     const responses = {
-        "Cloud Devops Intern @ Saviynt": `  "You will not be remembered for what you have started, but for what you have successfully completed." — Hamadi Jamali (my awesome manager)
+        "WICS": `  <strong>Vice-President, Women in Computer Science (WICS), Pittsburgh, PA    2023-2024 </strong>
 
-Working at Saviynt was an opportunity to bring creative solutions to life in a supportive environment. I worked on:
-
-• Security POC: Created and executed a security Proof of Concept (POC) for automated email encryption, protecting cloud cluster environment details using Python, Virtrue, and DynamoDB.
-
-• Automation & Efficiency: Developed a GitLab automation script that integrated 15,000+ customer databases with corresponding Salesforce information. This reduced billing errors by 40%, saved 50-60 hours of manual work, and improved the efficiency of the customer onboarding process.
-
-• Lambda Functions: Executed Lambda functions for hands-free automation, saving 48 minutes to 1.2 hours of employee time per task, including email verification, 2FA, and encryption of passwords sent to customers.
-
-• Data Management: Programmatically created, stored, and accessed datasets in S3 buckets, saving 2 hours per day on manual financial report consolidation with a 40% reduction in errors.`,
-        "Test Engineering Intern @ Honeywell": `   At Honeywell, I had the privilege of working with an exceptional team that exposed me to professional app development from initial build to final deployment. My time at Honeywell was both challenging and rewarding, pushing me to grow technically and personally. A recap:
+• Introduced fortune 100 sponsors and technical workshops for underrepresented student communities.`,
+        "Lothrop Hall": `<strong> President, Lothrop Hall Council, Pittsburgh, PA    2022-2023 </strong>
         
-    • Found and pushed fixes for two major bugs before version release for embedded Android voice enabled application.
-• Designed and implemented a website for test automation tools using CSS, HTML, Python, and Flask.
-• Created test scripts and enhanced API documentation for proprietary test automation framework in Python using Sphinx.
-• Participated in the Agile/Scrum Software Development process - Sprint Planning, Standup, etc. 
-•  And ofcourse, being the Elmo Intern!  `,
-        "Undergraduate Teaching Assistant": `  I served as an undergraduate Teaching Assistant for CS0445: Data Structures and Algorithms 1 and CMPINF0401: Intermediate Programming in Java. I have always loved teaching, especially core concepts in Computer Science. One of my favorite accomplishments will always be having a class in full attendance at 9am on a Thursday! 
-        My role involved conducting weekly recitations, creating quizzes/mock exams, grading assignments, and hosting office hours!`,
-
-         "Web Dev Intern @ YouthPlaces": `   I took part in Pitt's IServe program that aims at helping Computer Science students serve non-profit organizations where I: 
-• Modified the organization’s website to monitor website traffic and digital risk rates using HTML and JS.
-• Added features to reflect real time events, programs and donations using Bootstrap, Flask, Sphinx and WordPress.`
+        • Lead a council of students and resident assistants to organize bi-weekly events for over 600 student residents.`,
+        "FSAE Panther Racing": `   <strong>Club Member, Pitt FSAE Panther Racing, Pittsburgh, PA   2022-present </strong>
+• Converted sensory signals to assembly language using ROS and Arduino to program a life-size intended F1 car.
+• Completed coursework on ROS, Linux, and Optimization Theory to get the vehicle ready for competition.`,
+        "SheInnovates": `Developed an application for OCD therapy with integrated sensors using HTML, Python, and Figma! `,
+        "f it we ball": "    bet, try putting on escape from LA and lmk what you think"
     };
+
     return (
         <div className="scroll-container">
             <div className="main-content">
@@ -144,6 +118,8 @@ Working at Saviynt was an opportunity to bring creative solutions to life in a s
         </div>
     );
 };
+
+
 // Styles for the Button component
 const styles = {
     Button: {
@@ -182,4 +158,4 @@ const Button = (props) => {
     );
 };
 
-export default WorkExperience;
+export default Intro;

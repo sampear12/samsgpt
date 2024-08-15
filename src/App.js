@@ -9,6 +9,7 @@ import Entrepreneurship from './components/Entre';
 import ExtraCurriculars from './components/ExtraCurriculars';
 import Projects from './components/Projects';
 import Links from './components/Links';
+import Intro from './components/intro';
 import './App.css';
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
       <div className="App">
         <Sidebar />
         <Routes>
+          <Route path="/" element={<Intro />} /> {/* Default route */}
+          <Route path="/intro" element={<Intro />} />
           <Route path="/profile" element={<MainContent />} />
           <Route path="/education" element={<Education />} />
           <Route path="/skills" element={<Skills />} />
