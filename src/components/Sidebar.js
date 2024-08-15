@@ -64,7 +64,7 @@ const Sidebar = () => {
         <div className="top-left-icon" onClick={handleToggle}>
             <TopIcons collapsed={collapsed} />
         </div>
-        <div style={{ marginTop: '20px', marginBottom: '40px', marginLeft: `5px` }}>
+        <div style={{ marginTop: '20px', marginBottom: '25px', marginLeft: `5px` }}>
             <div style={{ display: 'flex', alignItems: 'center' }} className="profile-button">
                 <CustomImage />
                 {!collapsed && (
