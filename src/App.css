@@ -30,9 +30,11 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
   padding: 20px;
   transition: margin-left 0.3s ease; /* Smooth transition for expanding */
-  width: calc(100% - 70px); /* Dynamically calculate the width */
+  width: calc(100% ); /* Dynamically calculate the width */
 }
 
 .main-content.expanded {
   margin-left: 2px; /* Adjust this based on expanded sidebar width */
+  width: calc(100% ); /* Dynamically calculate the width */
+
 }
