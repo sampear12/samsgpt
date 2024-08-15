@@ -62,8 +62,8 @@ Apart from this, in my free time I write songs, play the piano, play soccer, spi
         "WICS",
         "Lothrop Hall Council",
         "FSAE Panther Racing",
-        "SheInnovates",
-        "I'm bored of my current playlist, can you recommend smth?"
+        "SheInnovates"
+        
     ]);
 
     const responses = {

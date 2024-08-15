@@ -9,7 +9,7 @@ body {
 .App {
   display: flex;
   flex-direction: row;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden; /* Ensure the App container does not scroll */
 }
 
@@ -26,10 +26,11 @@ body {
 .main-content {
   flex-grow: 1;
   margin-left: 0px; /* Matches the width of the collapsed sidebar */
-  height: 100vh;
+  min-height: 100vh;
   overflow-y: auto; /* Allow vertical scrolling only */
   overflow-x: hidden; /* Prevent horizontal scrolling */
   padding: 20px;
+  padding-bottom: 10vh; /* Add space at the bottom for the search bar */
   box-sizing: border-box;
   transition: margin-left 0.3s ease; /* Smooth transition for expanding */
   width: calc(100% ); /* Dynamically calculate the width */
@@ -38,20 +39,20 @@ body {
 .main-content.expanded {
   margin-left: 2px; /* Adjust this based on expanded sidebar width */
   width: calc(100% ); /* Dynamically calculate the width */
-
 }
 
 /* Media Query for Mobile Devices */
 @media (max-width: 600px) {
   .App {
-    height: 90vh; /* 90% of the viewport height for mobile devices */
+    min-height: 90vh; /* 90% of the viewport height for mobile devices */
   }
 
   .sidebar {
-    height: 90vh; /* Adjusted to match the App height */
+    min-height: 90vh; /* Adjusted to match the App height */
   }
 
   .main-content {
-    height: 90vh; /* Adjusted to match the App height */
+    min-height: 90vh; /* Adjusted to match the App height */
+    padding-bottom: 10vh; /* Ensure the bottom padding is retained */
   }
 }
