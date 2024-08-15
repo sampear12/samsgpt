@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/samsgpt/static/css/main.60899789.chunk.css",
-    "main.js": "/samsgpt/static/js/main.02b31bc6.chunk.js",
-    "main.js.map": "/samsgpt/static/js/main.02b31bc6.chunk.js.map",
+    "main.js": "/samsgpt/static/js/main.e2936b16.chunk.js",
+    "main.js.map": "/samsgpt/static/js/main.e2936b16.chunk.js.map",
     "runtime-main.js": "/samsgpt/static/js/runtime-main.2c78a641.js",
     "runtime-main.js.map": "/samsgpt/static/js/runtime-main.2c78a641.js.map",
     "static/js/2.4f897b00.chunk.js": "/samsgpt/static/js/2.4f897b00.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.2c78a641.js",
     "static/js/2.4f897b00.chunk.js",
     "static/css/main.60899789.chunk.css",
-    "static/js/main.02b31bc6.chunk.js"
+    "static/js/main.e2936b16.chunk.js"
   ]
 }
