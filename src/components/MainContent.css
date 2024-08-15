@@ -195,7 +195,7 @@ button:hover {
     align-items: center; /* Align items vertically centered */
     justify-content: space-between; /* Ensure text is on the left and icon on the right */
     margin-bottom: 5px;
-    width: 100%; /* Ensure the container takes full width */
+    margin-left: auto;
     padding-right: 10px; /* Prevent content from hitting the edge */
     box-sizing: border-box; /* Include padding in width calculation */
     overflow: visible; /* Ensure no overflow cutting content */
