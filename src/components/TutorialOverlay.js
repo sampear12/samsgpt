@@ -6,7 +6,7 @@ const TutorialOverlay = ({ onDismiss }) => {
 
   useEffect(() => {
     const highlightConfigs = [
-      { selector: '.top-left-icon', text: 'Click here to collapse the sidebar.' },
+      { selector: '.top-left-icon', text: 'Click here to collapse the sidebar' },
       { selector: '.previous-conversations', text: 'Explore other parts of my resume' },
     ];
 
