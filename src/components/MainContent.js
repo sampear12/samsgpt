@@ -71,7 +71,7 @@ const MainContent = () => {
         "The ones who are crazy enough to think they can change the world, are the ones who do" - Steve Jobs
         15 year old Samika took his words as gospel, literally. 
 
-         • When I was 17, I created a cloud kitchen in my hometown, Pune. It was basically Uber eats on a smaller scale during Covid-19 but had a ROI of 175%. All the proceeds were donated to the <a href="https://prashanticancercare.org/" target="_blank" style="text-decoration: underline; color: inherit;">Prashanti Cancer Care Mission</a> (donate if you can!).
+         • When I was 17, I created a cloud kitchen in my hometown, Pune. It was basically Uber eats on a smaller scale during Covid-19 but had a ROI of 175%. This marked the beginning of my obsession with technology and entrepreneurship. 
          • In college, I've created and worked on more ideas than I can count, I've always been an entrepreneur at heart. I love exploring new tech, new places and new people hoping to learn and create something new. Something capable of helping people, making a positive impact and hopefully one day, capable of changing the world.
 
         <strong>#2 Apart from my sense of humor, I also have a passion for making things more efficient.</strong>

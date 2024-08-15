@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Card from './Card';
 import CustomImage from './CustomImage';
@@ -12,15 +12,45 @@ const Sidebar = () => {
   const [showTutorial, setShowTutorial] = useState(true); // State to control tutorial visibility
   const location = useLocation();
 
-  const handleToggle = () => {
-    setCollapsed(!collapsed);
-    console.log('Sidebar collapsed:', !collapsed);
+  // Function to determine responsive font size
+  const getResponsiveFontSize = () => {
+    if (window.innerWidth <= 600) {
+      return '14px'; // Font size for mobile devices
+    } else if (window.innerWidth <= 1024) {
+      return '14px'; // Font size for tablets
+    } else {
+      return '16px'; // Font size for desktops and larger screens
+      
+    }
   };
 
   const collapsedStyles = {
     width: '70px',
     padding: '10px',
     alignItems: 'center',
+    fontSize: getResponsiveFontSize(), // Adjust font size for collapsed sidebar
+  };
+
+  useEffect(() => {
+    // Handle window resize event to update font size
+    const handleResize = () => {
+      document.querySelectorAll('.profile-button span').forEach((element) => {
+        element.style.fontSize = getResponsiveFontSize();
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Initial font size setting
+    handleResize();
+
+    // Cleanup listener on component unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const handleToggle = () => {
+    setCollapsed(!collapsed);
+    console.log('Sidebar collapsed:', !collapsed);
   };
 
   const handleDismissTutorial = () => {
@@ -32,31 +62,40 @@ const Sidebar = () => {
       <div className="top-left-icon" onClick={handleToggle}>
         <TopIcons collapsed={collapsed} />
       </div>
-      <div style={{ marginTop: '20px', marginBottom: '30px' }}>
+      <div style={{ marginTop: '20px', marginBottom: '40px', marginLeft: `0px` }}>
         <div style={{ display: 'flex', alignItems: 'center' }} className="profile-button">
           <CustomImage />
-          {!collapsed && <span style={{ marginLeft: '10px', color: '#ffffff' }}>Sam's GPT</span>}
+          {!collapsed && <span style={{ color: '#ffffff', fontSize: getResponsiveFontSize() }}>Sam's GPT</span>}
         </div>
       </div>
+    
       <Link to="/profile">
-        <ProfileButton
-          text="Profile"
-          active={location.pathname === '/profile'}
-          collapsed={collapsed}
-          className="profile-button"
-        />
-      </Link>
-      <div style={{ marginTop: '20px', color: '#b4b4b4' }} className="previous-conversations">
-        {!collapsed && <span>Previous Conversations</span>}
+  <ProfileButton
+    text="Profile"
+    active={location.pathname === '/profile'}
+    collapsed={collapsed}
+    className="profile-button"
+    style={{
+      fontSize: getResponsiveFontSize(),
+      marginLeft: '10px',  // Apply the same marginLeft as Prev. Conversations
+      padding: '0', // Ensure no extra padding
+    }}
+  />
+</Link>
+
+
+      <div style={{ marginTop: '25px', marginLeft: `10px`,color: '#b4b4b4' }} className="previous-conversations">
+        {!collapsed && <span style={{ fontSize: getResponsiveFontSize() }}>Prev. Conversations</span>}
       </div>
       {!collapsed && (
         <div style={{ backgroundColor: '#ffffff', height: '2px', width: '100%', margin: '10px 0' }}></div>
       )}
-      <Link to="/education">
+      <Link to="/work-experience">
         <ProfileButton
-          text="Education"
-          active={location.pathname === '/education'}
+          text="Work Experience"
+          active={location.pathname === '/work-experience'}
           collapsed={collapsed}
+          style={{ fontSize: getResponsiveFontSize() }} // Adjust font size dynamically
         />
       </Link>
       <Link to="/skills">
@@ -64,13 +103,7 @@ const Sidebar = () => {
           text="Skills"
           active={location.pathname === '/skills'}
           collapsed={collapsed}
-        />
-      </Link>
-      <Link to="/work-experience">
-        <ProfileButton
-          text="Work Experience"
-          active={location.pathname === '/work-experience'}
-          collapsed={collapsed}
+          style={{ fontSize: getResponsiveFontSize() }} // Adjust font size dynamically
         />
       </Link>
       <Link to="/entrepreneurship">
@@ -78,6 +111,15 @@ const Sidebar = () => {
           text="Entrepreneurship"
           active={location.pathname === '/entrepreneurship'}
           collapsed={collapsed}
+          style={{ fontSize: getResponsiveFontSize() }} // Adjust font size dynamically
+        />
+      </Link>
+      <Link to="/education">
+        <ProfileButton
+          text="Education"
+          active={location.pathname === '/education'}
+          collapsed={collapsed}
+          style={{ fontSize: getResponsiveFontSize() }} // Adjust font size dynamically
         />
       </Link>
       <Link to="/extra-curriculars">
@@ -85,13 +127,7 @@ const Sidebar = () => {
           text="Extra Curriculars"
           active={location.pathname === '/extra-curriculars'}
           collapsed={collapsed}
-        />
-      </Link>
-      <Link to="/projects">
-        <ProfileButton
-          text="Projects"
-          active={location.pathname === '/projects'}
-          collapsed={collapsed}
+          style={{ fontSize: getResponsiveFontSize() }} // Adjust font size dynamically
         />
       </Link>
       <Link to="/links">
@@ -99,6 +135,7 @@ const Sidebar = () => {
           text="Links"
           active={location.pathname === '/links'}
           collapsed={collapsed}
+          style={{ fontSize: getResponsiveFontSize() }} // Adjust font size dynamically
         />
       </Link>
       {showTutorial && <TutorialOverlay onDismiss={handleDismissTutorial} />}

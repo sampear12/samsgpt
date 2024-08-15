@@ -1,11 +1,28 @@
 .sidebar {
-  width: 2px;
+  width: 50px;
+  padding: 5px; /* Remove any padding */
+  margin: 10px;  /* Remove any margin */
+  box-sizing: border-box; /* Ensure padding is included in the width */
   transition: width 0.3s;
 }
 
+.profile-button {
+  padding: 3px 7px; /* You can reduce this if needed */
+  margin: 0; /* Ensure no extra margin is added */
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  color: #b71f1f;
+  cursor: pointer;
+}
+
+.profile-button.collapsed {
+  justify-content: center;
+  padding-left: 0px; /* Ensure no left padding is applied */
+}
+
 .sidebar.collapsed {
-  width: 10px;
-  
+  width: 50px;
 }
 
 .top-icons {
@@ -18,25 +35,10 @@
   margin-top: 20px;
 }
 
-.profile-button {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  transition: justify-content 0.3s;
-  text-align: left; /* Ensure text alignment is left */
-  width:100;
-  box-sizing: border-box; /* Include padding in width calculation */
-  transition: justify-content 0.3s, padding 0.3s;
-  color: #ffffff;
-  cursor: pointer;
-}
 
-.profile-button.collapsed {
-  justify-content: center;
-}
 
 .profile-button span {
-  margin-left: 0px;
+  margin-left: 3px;
   transition: display 0.3s;
 }
 
@@ -46,8 +48,9 @@
 }
 
 .profile-button.active {
-  color: #d4d4d4; /* Two shades lighter */
+  color: #6b1010;
 }
+
 a {
-  text-decoration: none; /* Remove underline for all anchor tags */
+  text-decoration: none;
 }

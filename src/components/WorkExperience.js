@@ -15,19 +15,30 @@ const WorkExperience = () => {
     }, []);
 
     const initialMessage = useTypewriter(
-        `    <strong>Test Engineering Intern, Honeywell, Pittsburgh, PA May-August 2023</strong>
+        `   I have had a myriad of technical experiences so far that have shaped my technical and interpersonal skills. Click on the options below to learn more about each individual experience!
+        ---------------------------------------------------------------------------------------------------------------------------------------
+        <strong>Cloud DevOps Intern, <a href="https://saviynt.com/" target="_blank" style="text-decoration: underline; color: inherit;">Saviynt</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        Los Angeles, CA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         May-August 2023</strong>
+        <em>Skills: AWS Lambda, IAM, EC2, S3, DynamoDB, boto3, SES, Git automation, Python, Java, Virtru, SalesForce, Atlassian (Jira, Confluence)</em>
+        "You will not be remembered for what you have started, but for what you have successfully completed." — Hamadi Jamali (my awesome manager)
 
-• Found and pushed fixes for two major bugs before version release for embedded Android voice enabled application.
-• Designed and implemented a website for test automation tools using CSS, HTML, Python, and Flask.
-• Created test scripts and enhanced API documentation for proprietary test automation framework in Python using Sphinx.
-• Participated in the Agile/Scrum Software Development process - Sprint Planning, Standup, etc.
+Working at Saviynt was an opportunity to bring creative solutions to life in a supportive environment. I worked on security, encryption and automation on several AWS services including Lambda, IAM, EC2, S3 etc. 
+I also had the privilege of presenting and executing a POC to Sachin Nayyar, CEO of Saviynt, which automated 10-20 redundant processes, impacting over 600 employees - probably the coolest moment of my career so far.
+---------------------------------------------------------------------------------------------------------------------------------------        
+        <strong>Test Engineering Intern, <a href="https://www.honeywell.com/us/en" target="_blank" style="text-decoration: underline; color: inherit;">Honeywell</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pittsburgh, PA  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    May-August 2023</strong>
+<em>Skills: Python, Java, GitHub, Agile, Android, Bootstrap, Sphinx, Flask, API documentation, Test automation, Functional and Regression testing, Atlassian Toolset (JIRA, Bitbucket, Confluence), Appium and Selenium, SourceTree</em> 
 
-<strong>Undergraduate Teaching Assistant, University of Pittsburgh, Pittsburgh, PA 2023-2024 </strong>
-• Conducted weekly recitations, created quizzes/mock exams, graded assignments, and hosted office hours for students in CS0445 Algorithms and Data Structures & CS0401 Intermediate Programming in Java.
+At Honeywell, I had the privilege of working with an exceptional team that exposed me to professional app development—from initial build to final deployment. My role involved API documentation, creating test scripts for automated testing, finding and pushing bug fixes and ofcourse, being the Elmo intern!
+From debugging critical issues in voice-enabled Android applications to creating the design of a test automation website, my time at Honeywell was both challenging and rewarding, pushing me to grow technically and personally.
+---------------------------------------------------------------------------------------------------------------------------------------
+<strong>Undergraduate Teaching Assistant, <a href="https://www.pitt.edu/" target="_blank" style="text-decoration: underline; color: inherit;">University of Pittsburgh</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Pittsburgh, PA    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  2023-2024 </strong>
+<em>Skills: Using memes as an effective strategy to explain difficult concepts</em>
 
-<strong>Website Development Intern, YouthPlaces, Pittsburgh, PA January-May 2023</strong>
-• Modified the organization’s website to monitor website traffic and digital risk rates using HTML and JS.
-• Added features to reflect real time events, programs and donations using Bootstrap, Flask, Sphinx and WordPress.
+I served as an undergraduate Teaching Assistant for CS0445: Data Structures and Algorithms 1 and CMPINF0401: Intermediate Programming in Java. I have always loved teaching, especially core concepts in Computer Science. One of my favorite accomplishments will always be having a class in full attendance at 9am on a Thursday! 
+---------------------------------------------------------------------------------------------------------------------------------------
+<strong>Website Development Intern,  <a href="https://youthplaces.org/" target="_blank" style="text-decoration: underline; color: inherit;">YouthPlaces</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Pittsburgh, PA   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   January-May 2023</strong>
+<em>Skills: HTML, CSS, JS, WordPress</em>
+
+I took part in Pitt's IServe program that aims at helping Computer Science students serve non-profit organizations. I worked on maintaining and enhancing the YouthPlaces website using CSS, HTML, WordPress and JS!
 `,
         handleTypewriterComplete
     );
@@ -60,63 +71,26 @@ const WorkExperience = () => {
     const [remainingOptions, setRemainingOptions] = useState([
         "Cloud Devops Intern @ Saviynt",
         "Test Engineering Intern @ Honeywell",
+        "Undergraduate Teaching Assistant",
         "Web Dev Intern @ YouthPlaces",
     ]);
 
     const responses = {
-        "Cloud Devops Intern @ Saviynt": `   `,
-        "Experience in Cloud": `    I have been working within the cloud for the past year with 3 months of concentrated experience working at Saviynt as a Cloud DevOps Intern.
-        
-        - managed roll creation, access management and assumRole functionality on IAM
+        "Cloud Devops Intern @ Saviynt": `  • Security POC: Created and executed a security Proof of Concept (POC) for automated email encryption, protecting cloud cluster environment details using Python, Virtrue, and DynamoDB.
 
-        - programatically created, stored and accessed datasets in S3 buckets
+• Automation & Efficiency: Developed a GitLab automation script that integrated 15,000+ customer databases with corresponding Salesforce information. This reduced billing errors by 40%, saved 50-60 hours of manual work, and improved the efficiency of the customer onboarding process.
 
-        - created Lambda functions to execute hands-free automation
+• Lambda Functions: Executed Lambda functions for hands-free automation, saving 48 minutes to 1.2 hours of employee time per task, including email verification, 2FA, and encryption of passwords sent to customers.
 
-        - created cloud cluster environment for customer access using EC2, EKS and Kubernetes
+• Data Management: Programmatically created, stored, and accessed datasets in S3 buckets, saving 2 hours per day on manual financial report consolidation with a 40% reduction in errors.`,
+        "Test Engineering Intern @ Honeywell": `  • Found and pushed fixes for two major bugs before version release for embedded Android voice enabled application.
+• Designed and implemented a website for test automation tools using CSS, HTML, Python, and Flask.
+• Created test scripts and enhanced API documentation for proprietary test automation framework in Python using Sphinx.
+• Participated in the Agile/Scrum Software Development process - Sprint Planning, Standup, etc.   `,
+        "Undergraduate Teaching Assistant": `  • Conducted weekly recitations, created quizzes/mock exams, graded assignments, and hosted office hours for students in CS0445 Algorithms and Data Structures & CS0401 Intermediate Programming in Java.`,
 
-        - automated virtual session host creaton using EC2 `,
-        "FrontEnd/Backend Experience": `   Through my personal ventures, internship experiences and my role as founder in SAAS startups, I (tried to) learn the art of being a full stack developer! My projects with associated skills:
-        
-        <strong>FrontEnd:</strong>
-
-        Personal Website + other projects: React, HTML, CSS, JavaScript, AI/ML, Git
-
-        Test Engineering Intern at Honeywell: HTML/CSS, React
-
-        SAAS prototype: React, Flask, Vercel
-
-        Website Developer at YouthPlaces: WordPress, HTML/CSS
-        
-
-        <strong>BackEnd:</strong>
-
-        SAAS Prototype: Node.js, MongoDB, SignalR .NET, Firebase, express, MSSQL
-
-        Cloud DevOps at Saviynt: S3 bucket automation for data storage`,
-
-         "Tools": `   I learnt to use various different technical tools throughout my experiences:
-         
-         Git: 
-         - can execute various git commands including commit, rebase, cherrypick, resolve merge conflicts
-         - programatically change settings by generating and utilizing access tokens 
-         - studied the git API documentation
-
-         Atlassian Toolset: 
-         - Utilized Jira to create, assign and arrange tasks
-         - Utilized BitBucket for creating test cases at Honeywell
-         - Utilized Confluence to create thorough code documentation and share files with my teams
-
-         Agile:
-         - Effectively participated in the Agile Development process with daily standups, sprint meetings etc
-
-         API documentation:
-         - Thoroughly documented API code base for over 100 test files at Honeywell
-         - Documented each method with the definition, input datatype and return type of each function.
-        
-         Test Automation + Functional/Regression Testing: 
-         - Created test scripts at Honeywell for a voice enabled android application
-         - Performed Functional and Regressional Testing to ensure error proof transition to the latest deployment version`
+         "Web Dev Intern @ YouthPlaces": `  • Modified the organization’s website to monitor website traffic and digital risk rates using HTML and JS.
+• Added features to reflect real time events, programs and donations using Bootstrap, Flask, Sphinx and WordPress.`
     };
     return (
         <div className="scroll-container">

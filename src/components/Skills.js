@@ -119,7 +119,7 @@ Git, RESTful API, Atlassian Toolset (JIRA, Bitbucket, Confluence), IAPs (Identit
 
         Cloud DevOps at Saviynt: S3 bucket automation for data storage`,
 
-        "AI/ML": `   My experience with AI/ML has been entirely based on my interest in the field and the knowledge I have gained through personal projects and online learning.
+        "AI/ML": `   My experience with AI/ML has been entirely based on my interest in the field and the knowledge I have gained through personal projects.
         
         SamsGPT: Before this website was used for its design, I used the ChatGPT API to train a model on my resume. This project involved a lot of:
         •   Prompt engineering, 

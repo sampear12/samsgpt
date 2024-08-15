@@ -1,12 +1,13 @@
 /* Global padding */
 body {
     padding: 16px;
-    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 /* Sidebar styles */
 .sidebar {
-    width: 200px; /* Default width for larger screens */
+    width: 160px;
     transition: width 0.3s;
     position: fixed;
     top: 0;
@@ -14,19 +15,37 @@ body {
     height: 100vh;
     overflow-y: auto;
     z-index: 1000;
+    font-size: 14px;
+}
+
+/* Sidebar content adjustments */
+.sidebar .profile-button {
+    font-size: 14px;
+    padding: 8px;
+}
+
+.sidebar .nav-item {
+    font-size: 12px;
+    padding: 8px 10px;
+}
+
+.sidebar .top-left-icon img {
+    width: 30px;
+    height: auto;
 }
 
 /* Adjust sidebar for mobile devices (phones, less than 600px) */
 @media (max-width: 600px) {
     .sidebar {
-       
-        position: fixed;
-        height: 100vh; /* Full height on mobile */
+        width: 50px;
+        font-size: 12px;
     }
+
     .main-content {
-        margin-left: 0; /* Remove the margin to fill the screen */
-        padding: 16px; /* Adjust padding for better content fit */
+        margin-left: 50px;
+        padding: 8px;
     }
+
     .top-left-icon {
         position: fixed;
         right: 10px;
@@ -38,16 +57,17 @@ body {
 /* Adjustments for larger devices (tablets, desktops) */
 @media (min-width: 600px) {
     .main-content {
-        margin-left: 250px; /* Adjust margin to account for sidebar width */
+        margin-left: 160px;
     }
 }
 
 /* Adjustments for sidebar collapse */
 .sidebar.collapsed {
-    width: 70px; /* Adjust the width when sidebar is collapsed */
+    width: 50px;
     transition: width 0.3s;
+    font-size: 12px;
 }
 
 .profile-button.collapsed span {
-    display: none; /* Hide text in collapsed state */
+    display: none;
 }

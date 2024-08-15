@@ -2,59 +2,44 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Nanum Gothic", sans-serif;
-    background-color: #333;
-    box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+    background-color: #e03f3f;
+    box-sizing: border-box;
 }
 
 .card {
     position: relative;
-    width: 100%; /* Make the card responsive */
-    max-width: 237px; /* Keep the max width for larger screens */
-    height: auto; /* Make the height flexible */
-    background-color: #171717;
-    border-radius: 10px;
-    padding: 16px; /* Add padding for better spacing */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
-    margin: 0 auto; /* Center the card horizontally */
+    width: 70%; /* Use a percentage of the container's width */
+    max-width: 30vw; /* Use viewport width for scaling */
+    height: auto;
+    background-color: #b40c0c;
+    border-radius: 1vw; /* Relative border-radius */
+    padding: 2vw; /* Relative padding */
+    margin: 0 auto;
 }
 
 .nav-button {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 2vw; /* Relative padding */
     cursor: pointer;
-    margin-bottom: 10px; /* Add spacing between buttons */
+    margin-bottom: 1.5vw; /* Relative margin */
     box-sizing: border-box;
 }
 
 .nav-button .text {
-    margin-left: 10px;
-}
-
-.nav-button.sam-gpt {
-    padding-top: 20px; /* Adjust padding for consistency */
-}
-
-.nav-button.explore-gpt {
-    padding-top: 20px; /* Adjust padding for consistency */
-}
-
-.nav-button.navigate .text {
-    color: #b4b4b4;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 20px;
+    margin-left: 1vw; /* Relative margin */
+    font-size: 1.5vw; /* Relative font size */
 }
 
 .nav-button.profile {
     background-color: #ffffff;
-    box-shadow: 0px 2px 10px rgba(3, 3, 3, 0.1);
+    box-shadow: 0px 2px 10px rgba(123, 13, 13, 0.1);
 }
 
 .nav-button.profile .text {
     color: #000000;
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 2vw; /* Relative font size */
+    line-height: 2.5vw; /* Relative line-height */
 }
 
 .nav-button.skills .text,
@@ -64,20 +49,8 @@ body {
 .nav-button.projects .text,
 .nav-button.links .text {
     color: #ececec;
-    font-size: 20px;
-    line-height: 26px;
-}
-
-.text.sam-gpt {
-    color: #ececec;
-    font-size: 12px;
-    line-height: 18px;
-}
-
-.text.explore-gpt {
-    color: #ececec;
-    font-size: 11px;
-    line-height: 18px;
+    font-size: 2vw;
+    line-height: 2.5vw;
 }
 
 .image {
@@ -87,13 +60,11 @@ body {
 }
 
 .image.sam-gpt {
-    width: 23px;
-    height: 23px;
-    background-image: url('/mnt/data/image.png');
+    width: 3vw; /* Relative width */
+    height: 3vw; /* Relative height */
 }
 
 .image.explore-gpt {
-    width: 15px;
-    height: 14px;
-    background-image: url('/mnt/data/image.png');
+    width: 2vw;
+    height: 2vw;
 }
