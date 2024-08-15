@@ -22,6 +22,25 @@ body {
   overflow-y: auto; /* Allows sidebar content to scroll if necessary */
   transition: width 0.3s ease; /* Smooth transition for collapsing */
 }
+/* Media Query for Smaller Devices */
+@media (max-width: 600px) {
+  .sidebar {
+    width: 100px; /* Increase width slightly on small screens */
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    overflow-y: auto; /* Ensure sidebar content is scrollable */
+  
+  }
+
+  .main-content {
+    min-height: 90vh; /* Adjusted to match the App height */
+    padding-bottom: 10vh; /* Ensure the bottom padding is retained */
+  }
+
+}
 
 .main-content {
   flex-grow: 1;
@@ -41,18 +60,3 @@ body {
   width: calc(100% ); /* Dynamically calculate the width */
 }
 
-/* Media Query for Mobile Devices */
-@media (max-width: 600px) {
-  .App {
-    min-height: 90vh; /* 90% of the viewport height for mobile devices */
-  }
-
-  .sidebar {
-    min-height: 90vh; /* Adjusted to match the App height */
-  }
-
-  .main-content {
-    min-height: 90vh; /* Adjusted to match the App height */
-    padding-bottom: 10vh; /* Ensure the bottom padding is retained */
-  }
-}
