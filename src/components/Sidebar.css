@@ -1,7 +1,7 @@
 .sidebar {
   width: 50px;
-  padding: 5px; /* Remove any padding */
-  margin: 10px;  /* Remove any margin */
+  padding: 0px; /* Remove any padding */
+  margin: 0px;  /* Remove any margin */
   box-sizing: border-box; /* Ensure padding is included in the width */
   transition: width 0.3s;
 }

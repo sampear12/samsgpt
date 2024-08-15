@@ -4,11 +4,11 @@ const Card = ({ children, style }) => {
   // Define the responsive width
   const getResponsiveWidth = () => {
     if (window.innerWidth <= 600) { // For mobile devices
-      return '40vw'; // 90% of the viewport width
+      return '34.5vw'; // 90% of the viewport width
     } else if (window.innerWidth <= 1024) { // For tablets
       return '10vw'; // 60% of the viewport width
     } else { // For desktop and larger screens
-      return '20vw'; // 30% of the viewport width
+      return '15vw'; // 30% of the viewport width
     }
   };
 
@@ -21,7 +21,7 @@ const Card = ({ children, style }) => {
     borderRadius: '0px',
     display: 'flex',
     flexDirection: 'column',
-    padding: '2px',
+    padding: '0px',
     boxSizing: 'border-box',
     flexShrink: 0,
     transition: 'width 0.3s, padding 0.3s', // Ensure a smooth transition

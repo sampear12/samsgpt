@@ -75,7 +75,7 @@ const Sidebar = () => {
                             marginLeft: '10px'  // Add margin here to create space
                         }}
                     >
-                        Sam's GPT
+                        Samika
                     </span>
                 )}
             </div>

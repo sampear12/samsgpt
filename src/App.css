@@ -41,3 +41,17 @@ body {
 
 }
 
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+  .App {
+    height: 90vh; /* 90% of the viewport height for mobile devices */
+  }
+
+  .sidebar {
+    height: 90vh; /* Adjusted to match the App height */
+  }
+
+  .main-content {
+    height: 90vh; /* Adjusted to match the App height */
+  }
+}
