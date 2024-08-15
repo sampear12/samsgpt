@@ -95,7 +95,7 @@ const Sidebar = () => {
 </Link>
 
 
-      <div style={{ marginTop: '25px', marginLeft: `10px`,color: '#b4b4b4' }} className="previous-conversations">
+      <div style={{ marginTop: '15px', marginLeft: `10px`,color: '#b4b4b4' }} className="previous-conversations">
         {!collapsed && <span style={{ fontSize: getResponsiveFontSize() }}>Conversations</span>}
       </div>
       {!collapsed && (
