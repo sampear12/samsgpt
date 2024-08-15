@@ -4,7 +4,7 @@ const Card = ({ children, style }) => {
   // Define the responsive width
   const getResponsiveWidth = () => {
     if (window.innerWidth <= 600) { // For mobile devices
-      return '34.5vw'; // 90% of the viewport width
+      return '38vw'; // 90% of the viewport width
     } else if (window.innerWidth <= 1024) { // For tablets
       return '10vw'; // 60% of the viewport width
     } else { // For desktop and larger screens
