@@ -1,19 +1,6 @@
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #1e1e1e;
-  color: white;
-  overflow: hidden; /* Prevent scrolling on the entire page */
-}
-
-.App {
-  display: flex;
-  height: 100vh;
-  overflow: hidden; /* Ensure the App container does not scroll */
-}
-
+/* Existing styles for the sidebar */
 .sidebar {
-  width: 70px; /* Adjusted width for the collapsed sidebar */
+  width: 70px; /* Width for the collapsed sidebar */
   background-color: #b40c0c;
   flex-shrink: 0; /* Prevent shrinking */
   position: fixed; /* Fixes the sidebar in place */
@@ -22,16 +9,37 @@ body {
   transition: width 0.3s ease; /* Smooth transition for collapsing */
 }
 
+/* Adjusted styles for main-content */
 .main-content {
   flex-grow: 1;
-  margin-left: 0px; /* Matches the width of the collapsed sidebar */
+  margin-left: 70px; /* This should match the sidebar's width when collapsed */
   height: 100vh;
   overflow-y: auto; /* Allow vertical scrolling only */
   overflow-x: hidden; /* Prevent horizontal scrolling */
   padding: 20px;
   transition: margin-left 0.3s ease; /* Smooth transition for expanding */
+  width: calc(100% - 70px); /* Dynamically calculate the width */
 }
 
+/* Expanded state for main-content when sidebar is expanded */
 .main-content.expanded {
-  margin-left: 2px; /* Adjust this based on expanded sidebar width */
+  margin-left: 240px; /* Adjust this based on expanded sidebar width */
+  width: calc(100% - 240px); /* Dynamically calculate the width */
+}
+
+/* Optional: Adjustments for mobile view */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 50px; /* Slightly smaller width for mobile */
+  }
+
+  .main-content {
+    margin-left: 50px; /* Adjust margin to match the mobile sidebar width */
+    width: calc(100% - 50px); /* Adjust content width */
+  }
+
+  .main-content.expanded {
+    margin-left: 200px; /* Adjust based on expanded mobile sidebar width */
+    width: calc(100% - 200px); /* Adjust content width */
+  }
 }
