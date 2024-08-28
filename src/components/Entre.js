@@ -15,10 +15,10 @@ const MainContent = () => {
     }, []);
 
     const initialMessage = useTypewriter(
-        `  Congrats, you made it to my favorite part!! As a kid, it was practically impossible to seperate me from my copy of the <a href=" https://www.goodreads.com/book/show/11084145-steve-jobs" target="_blank" style="text-decoration: underline; color: inherit;">autobiography of Steve Jobs</a>. Not because I was obsessed with him, but because i was obsessed with the Idea of changing the world. To be fair, 10 year old Sam didn't understand how big the world <em>really</em> was. 
+        `  Congrats, you made it to my favorite part!! As a kid, it was practically impossible to seperate me from my copy of the autobiography of Steve Jobs. Not because I was obsessed with him, but because i was obsessed with the Idea of changing the world. To be fair, 10 year old Sam didn't understand how big the world <em>really</em> was. 
         
         <strong>AkimasBakingCo</strong>
-        At the time, Ubereats and other food delivery software were out of business in my hometown, Pune (India). I saw this opening in the market as a chance to deploy a simple yet effectively cloud kitchen in the city.
+        At the time, Ubereats and other food delivery software were out of business in my hometown, Pune (India). I saw this opening in the market as a chance to deploy a simple yet effective cloud kitchen in the city.
         I developed a script that would:
         1) intake food orders through a google form on the company's instagram (including customer address and contact info)
         2) automatically contact a local delivery service and connect me with a driver nearby who could drop off the prepared food in under 30 mins
